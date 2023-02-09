@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body{
+    background-image: url(../src/Images/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Josefin Sans';
+    margin: 0;
+}
+h1{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 280px;
+    cursor: default;
+    
+}
+h2{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 330px;
+    cursor: default;
+
+}
+#log-in-btn{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 23px;
+    border: transparent;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#log-in-btn:hover{
+    background-color: rgb(158, 163, 255);
+}
+h4{
+    color: rgb(255, 255, 255);
+    margin: 0;
+    position: absolute;
+    top: 520px;
+    font-weight: 300;
+    cursor: default;
+
+}
+#go-to-register{
+    cursor: pointer;
+    text-decoration: underline 1.5px solid white;
+
+}
+#go-to-register:hover{
+    color: dodgerblue;
+    text-decoration: underline 1.5px solid dodgerblue;
+}
+#root{
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+#root > img{
+    height: 400px;
+    margin: 0 0 0 0 ;
+}
+footer{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    color: white;
+    justify-content: center;
+    top: 180px;
+}
+@media (max-width: 400px), (max-width: 950px) {
+    #root > img{
+        width: 390px;
+        height: 300px;
+    }
+    h1{
+        top: 210px;
+    }
+    h2{
+        top: 260px;
+    }
+    #log-in-btn{
+        margin-top: 80px;
+    }
+    h4{
+        top: 445px;
+    }
+    footer{
+        height: 50px;
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
