@@ -1,10 +1,8 @@
-import { onNavigate } from './components/router.js'
+import { onNavigate } from './router';
 
 import { myFunction } from './lib/index.js';
 
 myFunction();
 
-
-document.getElementById('log-in-btn').addEventListener("click", () => {
-  console.log(onNavigate("/Iniciar-Sesion"));
-});
+const path = window.location.pathname;
+onNavigate(path);
