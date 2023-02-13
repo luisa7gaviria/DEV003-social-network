@@ -5,7 +5,7 @@ export const create = `
   <input type="email">
   <input type="password">
   <input type="password">
-  <button> CREAR </button>
+  <button> <a href='/muro'> CREAR </a> </button>
 </form>
 <button> Registrarse con Google </button>
 `;

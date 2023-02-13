@@ -1,9 +1,8 @@
-export const timeline = `
-<div>
-  <header>
-    <img src="Images/logo.png">
-    <h2>Inicio</h2>
-    <button> Salir </button>
-  </header>
-</div>
+export const timeline = ` 
+<div class="header">
+ <img src="Images/logo.png">
+ <h3> Inicio </h3>
+ <a href='/'><button>Salir<button></a>
+ </div>
+
 `;

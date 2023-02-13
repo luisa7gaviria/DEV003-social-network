@@ -42,12 +42,13 @@ h4{
     cursor: default;
 
 }
-#go-to-register{
+#go-to-register a{
     cursor: pointer;
     text-decoration: underline 1.5px solid white;
+    color: white;
 
 }
-#go-to-register:hover{
+#go-to-register a:hover{
     color: dodgerblue;
     text-decoration: underline 1.5px solid dodgerblue;
 }

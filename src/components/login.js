@@ -3,7 +3,7 @@ export const login = `
 <form> 
   <input type="email"> 
   <input type="password"> 
-  <button> Ingresar </button>
+  <button > <a href="/muro">Ingresar </a></button>
 </form>
 <p>¿Olvidaste tu contraseña?</p>
 <button> Iniciar Sesión con Google </button>
