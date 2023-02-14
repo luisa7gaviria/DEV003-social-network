@@ -5,6 +5,5 @@ export const login = `
   <input type="password"> 
   <button > <a href="/muro">Ingresar </a></button>
 </form>
-<p>¿Olvidaste tu contraseña?</p>
-<button> Iniciar Sesión con Google </button>
+ <p>¿Olvidaste tu contraseña?</p>
 `;

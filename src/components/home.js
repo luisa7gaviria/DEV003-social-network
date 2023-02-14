@@ -4,7 +4,6 @@ export const home = `
     <h1> ¡Bienvenido a GGamers!</h1>
     <h2> La red social para los amantes de los videojuegos </h2>
     <a href="/iniciar-sesion"><button id="log-in-btn"> Iniciar Sesión </button></a>
-    <button id="google-log" > Iniciar Sesión con google </button>
     <h4>¿No tienes una cuenta? <span id="go-to-register"><a href="crear-cuenta">Crea una</a></span></h4>
   
   <footer>
