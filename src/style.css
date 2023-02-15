@@ -5,7 +5,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Josefin Sans';
-    margin: 0;
+    margin: 2px;
 }
 h1{
     color: rgb(255, 255, 255);
@@ -23,11 +23,11 @@ h2{
 }
 #log-in-btn{
     width: 250px;
-    height: 50px;
+    height: 45px;
     border-radius: 10px;
     font-size: 23px;
     border: transparent;
-    margin-top: 30px;
+    margin-top: 65px;
     cursor: pointer;
 }
 #log-in-btn:hover{
@@ -62,7 +62,7 @@ h4{
 
 }
 #root > img{
-    height: 400px;
+    height: 350px;
     margin: 0 0 0 0 ;
 }
 footer{
@@ -74,6 +74,106 @@ footer{
     justify-content: center;
     top: 180px;
 }
+::placeholder{
+    text-align: center;
+    font-size: 17px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#createForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+.create-t{
+    position: absolute;
+    top: 40px;
+}
+#createAcc{
+    height: 30px;
+    width: 250px;
+    margin: 35px;
+    border-radius: 5px;
+    border: none; 
+    background-color: rgb(181, 205, 251);
+}
+#createAcc:hover{
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 rgb(13, 99, 220);
+}
+#logForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+#logForm p{
+    color: aliceblue;
+}
+input{
+    margin-top: 50px;
+    height: 30px;
+    width: 450px;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: 2px;
+    transition: .3s;
+}
+input:focus{
+    border-color: rgb(255, 170, 255);
+    box-shadow: 0 0 8px 0 mediumorchid;
+    
+}
+#enter-button{
+    height: 30px;
+    width: 250px;
+    margin: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(181, 205, 251);
+}
+#enter-button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 rgb(13, 99, 220);
+}
+.login-t{
+    position: absolute;
+    top: 40px;
+}
+#google-in{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(183, 228, 239);
+}
+#google-in:hover{
+    box-shadow: 0 0 8px 0 rgb(56, 190, 223);
+}
+.back-btn{
+    height: 30px;
+    width: 200px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(172, 159, 232);
+    cursor: pointer;
+}
+.back-btn:hover{
+    box-shadow: 0 0 8px 0 rgb(108, 82, 223) ;
+}
+.sucess-modal{
+    display: none;
+    background-color: rgba(251, 251, 251, 0.749);
+    color: rgb(0, 13, 111);
+    transition: .3s;
+}
 @media (max-width: 400px), (max-width: 950px) {
     #root > img{
         width: 390px;
@@ -81,12 +181,17 @@ footer{
     }
     h1{
         top: 210px;
+        font-size: 25px;
     }
     h2{
         top: 260px;
+        font-size: 20px;
     }
     #log-in-btn{
         margin-top: 80px;
+        width: 220px;
+        height: 40px;
+        font-size: 19px;
     }
     h4{
         top: 445px;
@@ -96,5 +201,26 @@ footer{
         font-size: 15px;
         text-align: center;
     }
+    ::placeholder{
+        font-size: 15px;
+    }
+    #createForm{
+        width: 390px;
+        margin-top: 120px;
+    }
+    #logForm{
+        width: 390px;
+        margin-top: 190px;
+    }
+    input{
+        margin-top: 30px;
+        height: 20px;
+        width: 300px;
+        
+    }
+    #google-in{
+        height: 30px;
+        width: 250px;
+    }
+    
 }
-

@@ -4,10 +4,10 @@ import { timeline } from './components/timeline';
 import { home } from './components/home';
 
 const routes = {
-  '/': home,
-  '/crear-cuenta': create,
-  '/iniciar-sesion': login,
-  '/muro': timeline,
+  '/': home(),
+  '/crear-cuenta': create(),
+  '/iniciar-sesion': login(),
+  '/muro': timeline(),
 };
 
 export const onNavigate = (pathname) => {
@@ -16,5 +16,5 @@ export const onNavigate = (pathname) => {
     pathname,
     window.location.origin + pathname,
   );
-  document.getElementById('root').innerHTML = routes[pathname];
+  document.getElementById('root').appendChild = routes[pathname];
 };
