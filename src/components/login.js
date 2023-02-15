@@ -1,4 +1,5 @@
-export const login = ` 
+export const Login = () => {
+  const createLoginContent = `
 <h1 class="login-t"> INICIAR SESIÓN </h1>
 <form id="logForm"> 
   <input type="email" placeholder="Correo Electrónico"> 
@@ -14,8 +15,7 @@ export const login = `
     <p> ¡ Ingreso exitoso ! </p>
     <a href='/muro'><img src="Images/homelogo.png"></a>
   </div>
-`;
-
-export function showModal() {
-  document.querySelector('.sucess-modal').style.display = 'block';
-}
+  `;
+  const loginSection = document.createElement('section');
+  loginSection.innerHTML = createLoginContent;
+};

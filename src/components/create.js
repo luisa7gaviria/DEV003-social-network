@@ -1,6 +1,4 @@
-import { onNavigate } from "../router";
-
-export function Create() {
+export const Create = () => {
   const createComponentContent = `
   <h1>CREAR CUENTA</h1>
   <form id="createForm">
@@ -22,4 +20,4 @@ export function Create() {
   });
 
   return section;
-}
+};

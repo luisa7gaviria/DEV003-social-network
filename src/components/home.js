@@ -1,5 +1,5 @@
-export const home = `
-  
+export const Home = () => {
+  const homePage = `
  <img src="Images/logo.png">
     <h1> ¡Bienvenido a GGamers!</h1>
     <h2> La red social para los amantes de los videojuegos </h2>
@@ -9,3 +9,9 @@ export const home = `
   <footer>
     <p> Hecho por Kelly Rivas, Luisa Gaviria y Pamela González </p>
   </footer> `;
+
+  const homeSection = document.createElement('section');
+  homeSection.innerHTML = homePage;
+
+  return homeSection;
+};

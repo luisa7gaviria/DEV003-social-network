@@ -1,13 +1,14 @@
-import { login } from './components/login';
-import { create } from './components/create';
-import { timeline } from './components/timeline';
-import { home } from './components/home';
+import { Login } from './components/login';
+// eslint-disable-next-line import/no-cycle
+import { Create } from './components/create';
+import { Timeline } from './components/timeline';
+import { Home } from './components/home';
 
 const routes = {
-  '/': home(),
-  '/crear-cuenta': create(),
-  '/iniciar-sesion': login(),
-  '/muro': timeline(),
+  '/': Home(),
+  '/crear-cuenta': Create(),
+  '/iniciar-sesion': Login(),
+  '/muro': Timeline(),
 };
 
 export const onNavigate = (pathname) => {
