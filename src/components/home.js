@@ -1,17 +1,29 @@
-export const Home = () => {
+import { onNavigate } from "../router";
+
+export const home = () => {
   const homePage = `
- <img src="Images/logo.png">
-    <h1> ¡Bienvenido a GGamers!</h1>
-    <h2> La red social para los amantes de los videojuegos </h2>
-    <a href="/iniciar-sesion"><button id="log-in-btn"> Iniciar Sesión </button></a>
-    <h4>¿No tienes una cuenta? <span id="go-to-register"><a href="crear-cuenta">Crea una</a></span></h4>
+
+  <img src="Images/logo.png">
+  <h1> ¡Bienvenido a GGamers!</h1>
+  <h2> La red social para los amantes de los videojuegos </h2>
+  <button id="log-in-btn"> Iniciar Sesión </button>
+  <h4>¿No tienes una cuenta? <span id="go-to-register"> Crea una </span></h4>
   
   <footer>
     <p> Hecho por Kelly Rivas, Luisa Gaviria y Pamela González </p>
-  </footer> `;
+  </footer> 
+  `;
 
   const homeSection = document.createElement('section');
   homeSection.innerHTML = homePage;
+
+  homeSection.querySelector('#log-in-btn').addEventListener('click', () => {
+    onNavigate('/iniciar-sesion');
+  });
+
+  homeSection.querySelector('#go-to-register').addEventListener('click', () => {
+    onNavigate('/crear-cuenta');
+  });
 
   return homeSection;
 };

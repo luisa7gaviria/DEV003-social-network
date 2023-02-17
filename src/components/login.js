@@ -1,21 +1,52 @@
-export const Login = () => {
+import { googleLogIn } from '../lib/auth';
+import { onNavigate } from "../router";
+
+export const login = () => {
   const createLoginContent = `
-<h1 class="login-t"> INICIAR SESIÓN </h1>
-<form id="logForm"> 
-  <input type="email" placeholder="Correo Electrónico"> 
-  <input type="password" placeholder="Contraseña">
-  <p>¿Olvidaste tu contraseña?</p>
-  <button id="enter-button"> <a href="/muro">Ingresar </a></button>
-</form>
+  <h1 class="login-t"> INICIAR SESIÓN </h1>
+    <form id="logForm"> 
+      <input id="inputMail" type="text" name="correo" placeholder="Correo Electrónico"> 
+      <input id="inputPass" type="password" name="contraseña" placeholder="Contraseña">
+      <p>¿Olvidaste tu contraseña?</p>
+      <div>
+      <button type="submit" id="enter-button"> Ingresar </button>
+      </div>
+    </form>
  
- <button id="google-in"> Continúa con Google </button>
- <a href="/"> <button class="back-btn"> Regresar </button> </a>
+    <img class="butongoo" src='Images/btngooglein.png'>
+
+    <button class="back-btn"> Regresar </button> 
  
- <div class="sucess-modal"> 
-    <p> ¡ Ingreso exitoso ! </p>
-    <a href='/muro'><img src="Images/homelogo.png"></a>
-  </div>
+   <div class="sucess-modal"> 
+      <p> ¡ Ingreso exitoso ! </p>
+      <img class="continue-by-g" src="Images/homelogo.png">
+    </div>
   `;
+
   const loginSection = document.createElement('section');
   loginSection.innerHTML = createLoginContent;
+
+  const logForm = loginSection.querySelector('#logForm');
+
+  logForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('kask inicio');
+  });
+
+  loginSection.querySelector('.butongoo').addEventListener('click', () => {
+    googleLogIn()
+      .then(() => {
+        console.log('ingreso exitoso');
+        loginSection.querySelector('.sucess-modal').style.display = 'block';
+      });
+  });
+  loginSection.querySelector('.continue-by-g').addEventListener('click', () => {
+    onNavigate('/muro');
+  });
+
+  loginSection.querySelector('.back-btn').addEventListener('click', () => {
+    onNavigate('/');
+  });
+
+  return loginSection;
 };

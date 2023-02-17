@@ -7,6 +7,12 @@ body{
     font-family: 'Josefin Sans';
     margin: 2px;
 }
+#root{
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 h1{
     color: rgb(255, 255, 255);
     position: absolute;
@@ -27,7 +33,7 @@ h2{
     border-radius: 10px;
     font-size: 23px;
     border: transparent;
-    margin-top: 65px;
+    margin-top: 45px;
     cursor: pointer;
 }
 #log-in-btn:hover{
@@ -37,22 +43,22 @@ h4{
     color: rgb(255, 255, 255);
     margin: 0;
     position: absolute;
-    top: 520px;
+    top: 550px;
     font-weight: 300;
     cursor: default;
 
 }
-#go-to-register a{
+#go-to-register {
     cursor: pointer;
     text-decoration: underline 1.5px solid white;
     color: white;
 
 }
-#go-to-register a:hover{
+#go-to-register:hover{
     color: dodgerblue;
     text-decoration: underline 1.5px solid dodgerblue;
 }
-#root{
+section{
     margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
@@ -100,6 +106,7 @@ a{
     border-radius: 5px;
     border: none; 
     background-color: rgb(181, 205, 251);
+    transition: .3s;
 }
 #createAcc:hover{
     cursor: pointer;
@@ -136,25 +143,24 @@ input:focus{
     border-radius: 5px;
     border: none;
     background-color: rgb(181, 205, 251);
+    transition: .3s;
 }
 #enter-button:hover{
     cursor: pointer;
-    box-shadow: 0 0 8px 0 rgb(13, 99, 220);
+    box-shadow: 0 0 8px 0 rgb(48, 123, 228);
 }
 .login-t{
     position: absolute;
     top: 40px;
 }
-#google-in{
-    height: 30px;
-    width: 300px;
+.butongoo{
+    width: 190px;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: rgb(183, 228, 239);
+    transition: .3s;
 }
-#google-in:hover{
-    box-shadow: 0 0 8px 0 rgb(56, 190, 223);
+.butongoo:hover{
+    box-shadow: 0 0 8px 0 rgb(187, 188, 188);
+    cursor: pointer;
 }
 .back-btn{
     height: 30px;
@@ -164,9 +170,10 @@ input:focus{
     border: none;
     background-color: rgb(172, 159, 232);
     cursor: pointer;
+    transition: .3s;
 }
 .back-btn:hover{
-    box-shadow: 0 0 8px 0 rgb(108, 82, 223) ;
+    box-shadow: 0 0 8px 0 rgb(127, 102, 241) ;
 }
 .sucess-modal{
     display: none;
@@ -178,6 +185,9 @@ input:focus{
     #root > img{
         width: 390px;
         height: 300px;
+    }
+    section{
+        width: 350px;
     }
     h1{
         top: 210px;
