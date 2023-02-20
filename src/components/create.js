@@ -1,5 +1,12 @@
 import { onNavigate } from '../router';
 import { validateForm } from '../validator';
+import { createAccount } from '../lib/auth';
+
+export const campos = {
+  name: false,
+  mail: false,
+  password: false,
+};
 
 export const create = () => {
   const createComponentContent = `
@@ -65,6 +72,9 @@ export const create = () => {
 
   myForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (campos.name && campos.mail && campos.password) {
+      createAccount();
+    }
   });
 
   section.querySelector('.back-btn').addEventListener('click', () => {
