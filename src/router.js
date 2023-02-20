@@ -1,14 +1,15 @@
-import { Login } from './components/login';
-// eslint-disable-next-line import/no-cycle
-import { Create } from './components/create';
-import { Timeline } from './components/timeline';
-import { Home } from './components/home';
+import { home } from './components/home';
+import { create } from './components/create';
+import { login } from './components/login';
+import { timeline } from './components/timeline';
+
+const rootDiv = document.getElementById('root');
 
 const routes = {
-  '/': Home(),
-  '/crear-cuenta': Create(),
-  '/iniciar-sesion': Login(),
-  '/muro': Timeline(),
+  '/': home(),
+  '/crear-cuenta': create(),
+  '/iniciar-sesion': login(),
+  '/muro': timeline(),
 };
 
 export const onNavigate = (pathname) => {
@@ -17,5 +18,5 @@ export const onNavigate = (pathname) => {
     pathname,
     window.location.origin + pathname,
   );
-  document.getElementById('root').appendChild = routes[pathname];
+  rootDiv.replaceChild(routes[pathname], rootDiv.firstChild);
 };
