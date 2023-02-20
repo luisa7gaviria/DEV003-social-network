@@ -98,11 +98,15 @@ a{
 .create-t{
     position: absolute;
     top: 40px;
+    font-size: xx-large;
+}
+.button-create{
+  position: absolute;
+    top: 70%;  
 }
 #createAcc{
     height: 30px;
     width: 250px;
-    margin: 35px;
     border-radius: 5px;
     border: none; 
     background-color: rgb(181, 205, 251);
@@ -131,10 +135,26 @@ input{
     border: 2px;
     transition: .3s;
 }
-input:focus{
+input:hover{
     border-color: rgb(255, 170, 255);
     box-shadow: 0 0 8px 0 mediumorchid;
     
+}
+.correct-input:focus{
+    border-color: rgb(39, 167, 54);
+    box-shadow: 0 0 8px 0 rgb(5, 255, 13);
+}
+.incorrect-input:focus{
+    border-color: rgb(232, 18, 14);
+    box-shadow: 0 0 8px 0 rgb(231, 40, 75);
+}
+.form__input-error{
+    color: whitesmoke;
+    display: none;
+    margin-top: 10px;
+}
+.form__input-error-activo{
+    display: block;
 }
 #enter-button{
     height: 30px;
@@ -152,6 +172,7 @@ input:focus{
 .login-t{
     position: absolute;
     top: 40px;
+    font-size: xx-large;
 }
 .butongoo{
     width: 190px;
@@ -165,21 +186,52 @@ input:focus{
 .back-btn{
     height: 30px;
     width: 200px;
-    margin-top: 50px;
     border-radius: 5px;
     border: none;
     background-color: rgb(172, 159, 232);
     cursor: pointer;
     transition: .3s;
+    position: fixed;
+    top: 80%;
 }
 .back-btn:hover{
     box-shadow: 0 0 8px 0 rgb(127, 102, 241) ;
 }
-.sucess-modal{
-    display: none;
-    background-color: rgba(251, 251, 251, 0.749);
-    color: rgb(0, 13, 111);
-    transition: .3s;
+.continue-by-g{
+    width: 70px;
+    cursor: pointer;
+}
+.modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden; 
+}
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ff8c00;
+    border-style: inset double ;
+    border-radius: 10px;
+    width: 700px;
+    height: 200px;
+    font-size: 23px;
+    background-color: rgba(245, 245, 245, 0.873);
+    position: absolute;
+    top: 30%;
+    left: 27%;
+}
+.success-modal{
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(90deg, #8b11bf97 50%, #0bb6f9b7 100%);
+    position: fixed;
+    transition: all .4s;      
 }
 @media (max-width: 400px), (max-width: 950px) {
     #root > img{
@@ -234,3 +286,4 @@ input:focus{
     }
     
 }
+/* animation: blowUpModal .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards; */
