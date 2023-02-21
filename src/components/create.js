@@ -39,6 +39,13 @@ export const create = () => {
 
   </form>
   <button class="back-btn"> Regresar </button>
+
+  <div class="modal"> 
+      <div class="modal-content">
+        <p> Tu usuario ha sido creado <br> Gracias por registrarte en GGamers</p>
+         <img class="continue-by-g" src="Images/homelogo.png">
+        </div>
+    </div>
   `;
 
   const section = document.createElement('section');
@@ -46,6 +53,7 @@ export const create = () => {
 
   const myForm = section.querySelector('#createForm');
   const inputs = section.querySelectorAll('#createForm input');
+  const mailInput = section.querySelector('#mail');
   const input1 = section.querySelector('#password');
   const input2 = section.querySelector('#passwordtwo');
 
@@ -73,8 +81,15 @@ export const create = () => {
   myForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (campos.name && campos.mail && campos.password) {
-      createAccount();
+      createAccount(mailInput.value, input1.value)
+        .then(() => {
+          section.querySelector('.modal').classList.add('success-modal');
+        });
     }
+  });
+
+  section.querySelector('.continue-by-g').addEventListener('click', () => {
+    onNavigate('/muro');
   });
 
   section.querySelector('.back-btn').addEventListener('click', () => {
