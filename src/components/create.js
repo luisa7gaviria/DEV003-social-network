@@ -46,6 +46,7 @@ export const create = () => {
          <img class="continue-by-g" src="Images/homelogo.png">
         </div>
     </div>
+    
   `;
 
   const section = document.createElement('section');

@@ -1,4 +1,4 @@
-import { campos } from "./components/create"; 
+import { campos } from './components/create'; 
 
 const expresiones = {
   usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
