@@ -1,9 +1,9 @@
-import { campos } from "./components/create"; 
+import { campos } from './components/create'; 
 
 const expresiones = {
   usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
   password: /^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,16}$/,
-  correo: /^\w+@[a-zA-Z_]+\.[a-zA-Z]{2,3}$/,
+  correo: /^\w.+@[a-zA-Z_]+\.[a-zA-Z]{2,3}$/,
 };
 
 const validarCampo = (expresion, inputext, campo) => {
