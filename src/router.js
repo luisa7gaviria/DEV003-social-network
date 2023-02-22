@@ -20,3 +20,7 @@ export const onNavigate = (pathname) => {
   );
   rootDiv.replaceChild(routes[pathname], rootDiv.firstChild);
 };
+
+window.onpopstate = () => {
+  rootDiv.replaceChild(routes[window.location.pathname], rootDiv.firstChild);
+};

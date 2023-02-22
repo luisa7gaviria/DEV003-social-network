@@ -1,5 +1,5 @@
 import { googleLogIn } from '../lib/auth';
-import { onNavigate } from "../router";
+import { onNavigate } from '../router';
 import { validateForm } from '../validator';
 
 export const login = () => {
