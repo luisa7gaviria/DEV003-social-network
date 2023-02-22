@@ -4,7 +4,7 @@ body{
     background-image: url(../src/Images/fondo.jpg);
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     margin: 2px;
 }
 #root{

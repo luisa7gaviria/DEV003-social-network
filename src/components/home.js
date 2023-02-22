@@ -1,4 +1,4 @@
-import { onNavigate } from "../router";
+import { onNavigate } from '../router';
 
 export const home = () => {
   const homePage = `
