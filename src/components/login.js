@@ -1,6 +1,8 @@
-import { googleLogIn } from '../lib/auth';
+import { googleLogIn, logAcc } from '../lib/auth';
+
 import { onNavigate } from '../router';
 import { validateForm } from '../validator';
+import { campos } from './create';
 
 export const login = () => {
   const createLoginContent = `
@@ -14,7 +16,7 @@ export const login = () => {
 
       <div id="group__password">
         <input id="password" type="password" name="contraseña" placeholder="Contraseña">
-         <p>¿Olvidaste tu contraseña?</p>
+        <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, <br> números y algún carácter especial sin espacios.</p>
       </div>
 
       <div>
@@ -39,6 +41,8 @@ export const login = () => {
   loginSection.innerHTML = createLoginContent;
 
   const loginInputs = loginSection.querySelectorAll('#logForm input');
+  const iLogMail = loginSection.querySelector('#mail');
+  const iLogPassword = loginSection.querySelector('#password');
 
   loginInputs.forEach((input) => {
     input.addEventListener('keyup', (e) => {
@@ -50,7 +54,15 @@ export const login = () => {
 
   logForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('kask inicio');
+    if (campos.mail && campos.password) {
+      logAcc(iLogMail.value, iLogPassword.value)
+        .then(() => {
+          onNavigate('/muro');
+        })
+        .catch(() => {
+          alert('Dirección de correo o contraseña incorrectos, inténtalo de nuevo.');
+        });
+    }
   });
 
   loginSection.querySelector('.butongoo').addEventListener('click', () => {

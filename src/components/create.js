@@ -25,7 +25,7 @@ export const create = () => {
 
       <div id="group__password"> 
          <input id= "password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
-         <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, números y algún carácter especial sin espacios. </p>
+         <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, <br> números y algún carácter especial sin espacios. </p>
       </div>
     
      <div id="group__passwordtwo">
@@ -84,7 +84,11 @@ export const create = () => {
     if (campos.name && campos.mail && campos.password) {
       createAccount(mailInput.value, input1.value)
         .then(() => {
+          console.log('se creó');
           section.querySelector('.modal').classList.add('success-modal');
+        })
+        .catch(() => {
+          alert('Este correo ya está en uso.');
         });
     }
   });
