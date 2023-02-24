@@ -28,6 +28,7 @@
     "jest/no-identical-title": "error",
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "import/no-duplicates":"off"
   }
 }
