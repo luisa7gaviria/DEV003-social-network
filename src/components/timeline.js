@@ -4,9 +4,15 @@ import { exit } from '../lib/auth';
 export const timeline = () => {
   const sectionTimeline = ` 
   <div class="header">
-   <img src="Images/logo.png">
-   <h3> Inicio </h3>
-   <button class="go-out">Salir<button>
+  <button class = "go-out"> Salir </button> </div>
+  <h3 class="start"> Inicio </h3>
+  <img class="logo" src="Images/logo.png">
+   
+  <div class="box-post"> 
+  <div class="messanger"> </div>
+  <button class="post"> Publicar </button> </div>
+  <div class="box1"> </div>
+   
   </div>
 
   <div class="modal"> 
