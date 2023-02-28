@@ -3,7 +3,7 @@ import { onNavigate } from '../router';
 export const home = () => {
   const homePage = `
 
-  <img src="Images/logo.png">
+  <img class="gg-logo" src="Images/logo.png">
   <h1> ¡Bienvenido a GGamers!</h1>
   <h2> La red social para los amantes de los videojuegos </h2>
   <button id="log-in-btn"> Iniciar Sesión </button>

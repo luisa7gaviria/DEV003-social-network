@@ -3,24 +3,27 @@ import { exit } from '../lib/auth';
 
 export const timeline = () => {
   const sectionTimeline = ` 
-  <div class="header">
-  <button class = "go-out"> Salir </button> </div>
-  <h3 class="start"> Inicio </h3>
-  <img class="logo" src="Images/logo.png">
-   
-  <div class="box-post"> 
-  <div class="messanger"> </div>
-  <button class="post"> Publicar </button> </div>
-  <div class="box1"> </div>
-   
+  <div class="timeHeader">
+     <button class = "go-out"> Salir </button> 
+     <h3 class="time-t"> Inicio </h3>
+     <img class="time-logo" src="Images/logo.png">
+  </div>
+  
+  <div class="posting-box">
+     <textarea id="toPost" placeholder="En qué estás pensando?..." maxlength="180"></textarea>
+     <button class="post"> Publicar </button>
+  </div>
+
+  <div class="box1"> 
+
   </div>
 
   <div class="modal"> 
       <div class="modal-content">
         <p> ¿ Realmente quieres cerrar sesión? </p>
         <div class="sign-out-confirmation">
-         <button id="exit-button" > SI </button>
-         <button id="stay-button" > NO </button>
+           <button id="exit-button" > SI </button>
+           <button id="stay-button" > NO </button>
          </div>
         </div>
     </div>
@@ -38,11 +41,12 @@ export const timeline = () => {
     exit()
       .then(() => {
         onNavigate('/');
+        window.location.reload();
       });
   });
 
   timelineContent.querySelector('#stay-button').addEventListener('click', () => {
-    exitModal.querySelector('.modal').classList.remove('modal-success');
+    exitModal.classList.remove('success-modal');
   });
 
   return timelineContent;

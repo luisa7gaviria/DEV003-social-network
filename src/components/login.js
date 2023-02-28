@@ -68,7 +68,6 @@ export const login = () => {
   loginSection.querySelector('.butongoo').addEventListener('click', () => {
     googleLogIn()
       .then(() => {
-        console.log('ingreso exitoso');
         loginSection.querySelector('.modal').classList.add('success-modal');
       });
   });
