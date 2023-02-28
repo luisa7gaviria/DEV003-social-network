@@ -34,7 +34,7 @@ export const create = () => {
      </div>
 
      <div class="button-create">
-       <button type="submit" id="createAcc" > Crear </button>
+       <button type="submit" id="createAcc" > Crear </button>x
      </div>
 
   </form>
