@@ -15,7 +15,7 @@ export const create = () => {
 
    <div id="group__name">
      <input id= "name" type="text" name="nombre" placeholder="Nombre" maxlength="16" > 
-     <p class="form__input-error" > Este campo solo permite letras y números con un máximo de 16 carácteres. </p>
+     <p class="form__input-error" > Este campo solo permite letras y números <br> con un máximo de 16 carácteres. </p>
     </div>
 
     <div id="group__mail">
@@ -23,13 +23,14 @@ export const create = () => {
      <p class="form__input-error"> Por favor ingresa una dirección de correo válida. </p>
     </div>
 
-      <div id="group__password"> 
+      <div id="group__password" class="group-pass"> 
          <input id= "password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
-         <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, <br> números y algún carácter especial sin espacios. </p>
-      </div>
+         <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, números y algún carácter especial sin espacios. </p>
+         <img src="Images/ojof.png" class="showPassword">
+         </div>
     
-     <div id="group__passwordtwo">
-       <input id= "passwordtwo" type="password" name="contraseña2" placeholder="Confirma tu contraseña" maxlength="16" >
+     <div id="group__passwordtwo" class="group-pass">
+       <input id= "passwordtwo" type="password" name="contraseña2" placeholder="Confirma tu contraseña" maxlength="16">
        <p class="form__input-error"> Las contraseñas deben ser iguales </p>
      </div>
 
@@ -77,6 +78,21 @@ export const create = () => {
   });
   input2.addEventListener('keyup', () => {
     validatePassword();
+  });
+
+  const showPas = section.querySelector('.showPassword');
+  let click = false;
+
+  showPas.addEventListener('click', () => {
+    if (!click) {
+      input1.type = 'text';
+      input2.type = 'text';
+      click = true;
+    } else if (click) {
+      input1.type = 'password';
+      input2.type = 'password';
+      click = false;
+    }
   });
 
   myForm.addEventListener('submit', (e) => {

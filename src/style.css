@@ -145,7 +145,12 @@ a {
 }
 
 #logForm p {
-    color: aliceblue;
+    position: absolute;
+    color: rgb(255, 255, 255);
+}
+#createForm p {
+    position: absolute;
+    color: rgb(255, 255, 255);
 }
 
 input {
@@ -163,6 +168,16 @@ input:hover {
     border-color: rgb(255, 170, 255);
     box-shadow: 0 0 8px 0 mediumorchid;
 
+}
+.group-pass{
+    position: relative;
+}
+.showPassword{
+    position: absolute;
+    right: 12px;
+    bottom: 20%;
+    transform: translateY(50%);
+    cursor: pointer;
 }
 
 .correct-input:focus {

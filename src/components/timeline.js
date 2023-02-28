@@ -10,18 +10,17 @@ export const timeline = () => {
   </div>
   
   <div class="posting-box">
-     <textarea id="toPost" placeholder="En qué estás pensando?..." maxlength="180"></textarea>
+     <textarea id="toPost" placeholder="¿En qué estás pensando?..." maxlength="180"></textarea>
      <button class="post"> Publicar </button>
   </div>
 
   <div class="box1"> 
-
   </div>
 
   <div class="modal"> 
       <div class="modal-content">
         <p> ¿ Realmente quieres cerrar sesión? </p>
-        <div class="sign-out-confirmation">
+        <div class="sign-out-confirmation" >
            <button id="exit-button" > SI </button>
            <button id="stay-button" > NO </button>
          </div>
