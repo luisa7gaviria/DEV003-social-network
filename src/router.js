@@ -1,8 +1,11 @@
 import { home } from './components/home';
-import { create } from './components/create';
+import { create, x } from './components/create';
 import { login } from './components/login';
 import { timeline } from './components/timeline';
 
+console.log(create, x)
+
+//const create = () => null
 const rootDiv = document.getElementById('root');
 
 const routes = {
