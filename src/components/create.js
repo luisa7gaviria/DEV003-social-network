@@ -26,11 +26,11 @@ export const create = () => {
       <div id="group__password" class="group-pass"> 
          <input id= "password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
          <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, números y algún carácter especial sin espacios. </p>
-         <img src="Images/ojo.png" class="showPassword">
+         <img src="Images/ojof.png" class="showPassword">
          </div>
     
      <div id="group__passwordtwo" class="group-pass">
-       <input id= "passwordtwo" type="password" name="contraseña2" placeholder="Confirma tu contraseña" maxlength="16" >
+       <input id= "passwordtwo" type="password" name="contraseña2" placeholder="Confirma tu contraseña" maxlength="16">
        <p class="form__input-error"> Las contraseñas deben ser iguales </p>
      </div>
 

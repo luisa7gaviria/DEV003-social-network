@@ -146,11 +146,11 @@ a {
 
 #logForm p {
     position: absolute;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 #createForm p {
     position: absolute;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 
 input {

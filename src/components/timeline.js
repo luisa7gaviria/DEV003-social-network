@@ -15,13 +15,12 @@ export const timeline = () => {
   </div>
 
   <div class="box1"> 
-
   </div>
 
   <div class="modal"> 
       <div class="modal-content">
         <p> ¿ Realmente quieres cerrar sesión? </p>
-        <div class="sign-out-confirmation">
+        <div class="sign-out-confirmation" >
            <button id="exit-button" > SI </button>
            <button id="stay-button" > NO </button>
          </div>

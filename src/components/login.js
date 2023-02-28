@@ -11,13 +11,13 @@ export const login = () => {
 
       <div id="group__mail">
         <input id="mail" type="text" name="correo" placeholder="Correo Electrónico" maxlength="50"> 
-         <p class="form__input-error"> Por favor ingresa una dirección de correo válida. </p>
+         <p class="form__input-error"> Por favor ingresa una dirección de correo válida.</p>
       </div>
 
       <div class="group-pass" id="group__password">
         <input id="password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
         <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, <br> números y algún carácter especial sin espacios.</p>
-        <img src="Images/ojo.png" class="showPassword">
+        <img src="Images/ojof.png" class="showPassword">
         </div>
 
       <div>
