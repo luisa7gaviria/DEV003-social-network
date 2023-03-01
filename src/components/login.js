@@ -1,4 +1,4 @@
-import { googleLogIn, logAcc } from '../lib/auth';
+import { googleLogIn, logAcc } from '../lib/functions';
 
 import { onNavigate } from '../router';
 import { validateForm } from '../validator';

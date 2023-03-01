@@ -1,6 +1,6 @@
 import { onNavigate } from '../router';
 import { validateForm } from '../validator';
-import { createAccount } from '../lib/auth';
+import { createAccount } from '../lib/functions';
 
 export const campos = {
   name: false,
@@ -119,6 +119,3 @@ export const create = () => {
 
   return section;
 };
-
-
-export const  x = 5

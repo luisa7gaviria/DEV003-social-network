@@ -1,5 +1,5 @@
 import { onNavigate } from '../router';
-import { exit } from '../lib/auth';
+import { exit } from '../lib/functions';
 
 export const timeline = () => {
   const sectionTimeline = ` 
