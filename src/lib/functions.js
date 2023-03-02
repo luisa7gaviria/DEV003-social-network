@@ -2,6 +2,7 @@ import {
   GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword,
   signInWithEmailAndPassword, signOut,
 } from 'firebase/auth';
+import { doc, collection } from 'firebase/firestore';
 import { auth, fs } from '../firebaseconf';
 
 const provider = new GoogleAuthProvider();
@@ -17,7 +18,7 @@ export const exit = () => signOut(auth);
 export const validateLog = () => {
   auth.onAuthStateChanged((user) => {
     if (user) {
-      console.log('esta logeado');
+      console.log(collection(fs, 'Posts').id);
     } else {
       console.log('no esta logeado');
     }

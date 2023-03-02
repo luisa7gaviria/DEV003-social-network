@@ -1,7 +1,7 @@
 import { onNavigate } from '../router';
-import { exit } from '../lib/functions';
+import { exit, validateLog } from '../lib/functions';
 
-export const timeline = () => {
+export function timeline() {
   const sectionTimeline = ` 
   <div class="timeHeader">
      <button class = "go-out"> Salir </button> 
@@ -15,6 +15,8 @@ export const timeline = () => {
   </div>
 
   <div class="box1"> 
+    <ul id="postList"> 
+    </ul>
   </div>
 
   <div class="modal"> 
@@ -48,5 +50,7 @@ export const timeline = () => {
     exitModal.classList.remove('success-modal');
   });
 
+  const postList = timelineContent.querySelector('#postList');
+  validateLog();
   return timelineContent;
-};
+}

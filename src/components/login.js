@@ -4,7 +4,7 @@ import { onNavigate } from '../router';
 import { validateForm } from '../validator';
 import { campos } from './create';
 
-export const login = () => {
+export function login() {
   const createLoginContent = `
   <h1 class="login-t"> INICIAR SESIÓN </h1>
     <form id="logForm"> 
@@ -94,4 +94,4 @@ export const login = () => {
   });
 
   return loginSection;
-};
+}

@@ -8,7 +8,7 @@ export const campos = {
   password: false,
 };
 
-export const create = () => {
+export function create() {
   const createComponentContent = `
   <h1 class="create-t">CREAR CUENTA</h1>
   <form id="createForm">
@@ -118,4 +118,4 @@ export const create = () => {
   });
 
   return section;
-};
+}
