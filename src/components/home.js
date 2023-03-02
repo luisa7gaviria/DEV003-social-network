@@ -1,6 +1,6 @@
 import { onNavigate } from '../router';
 
-export const home = () => {
+export function home() {
   const homePage = `
 
   <img class="gg-logo" src="Images/logo.png">
@@ -26,4 +26,4 @@ export const home = () => {
   });
 
   return homeSection;
-};
+}
