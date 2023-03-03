@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    background-image: url(../src/Images/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#root {
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 280px;
+    cursor: default;
+
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 330px;
+    cursor: default;
+
+}
+
+#log-in-btn {
+    width: 250px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 23px;
+    border: transparent;
+    margin-top: 45px;
+    cursor: pointer;
+}
+
+#log-in-btn:hover {
+    border-color: rgb(255, 170, 255);
+    box-shadow: 0 0 10px 0 mediumorchid;
+}
+
+h4 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    position: absolute;
+    top: 550px;
+    font-weight: 300;
+    cursor: default;
+
+}
+
+#go-to-register {
+    cursor: pointer;
+    text-decoration: underline 1.5px solid white;
+    color: white;
+
+}
+
+#go-to-register:hover {
+    color: dodgerblue;
+    text-decoration: underline 1.5px solid dodgerblue;
+    text-shadow: 0px 0px 3px #6c89a4;
+}
+
+section {
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#root> .gg-logo {
+    height: 350px;
+    margin: 0 0 0 0;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    color: white;
+    justify-content: center;
+    top: 180px;
+}
+
+::placeholder {
+    text-align: center;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#createForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.create-t {
+    position: absolute;
+    top: 40px;
+    font-size: xx-large;
+}
+
+.button-create {
+    margin-top: 50px;
+}
+
+#createAcc {
+    height: 30px;
+    width: 190px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(181, 205, 251);
+    transition: .3s;
+    font-size: 17px;
+}
+
+#createAcc:hover {
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 rgb(13, 99, 220);
+}
+
+#logForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+#logForm p {
+    position: absolute;
+    color: rgb(255, 255, 255);
+}
+#createForm p {
+    position: absolute;
+    color: rgb(255, 255, 255);
+}
+
+input {
+    margin-top: 50px;
+    height: 30px;
+    width: 450px;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: 2px;
+    transition: .3s;
+}
+
+input:hover {
+    border-color: rgb(255, 170, 255);
+    box-shadow: 0 0 8px 0 mediumorchid;
+
+}
+.group-pass{
+    position: relative;
+}
+.showPassword{
+    position: absolute;
+    right: 12px;
+    bottom: 20%;
+    transform: translateY(50%);
+    cursor: pointer;
+}
+
+.correct-input:focus {
+    border-color: rgb(39, 167, 54);
+    box-shadow: 0 0 8px 0 rgb(5, 255, 13);
+}
+
+.incorrect-input:focus {
+    border-color: rgb(232, 18, 14);
+    box-shadow: 0 0 8px 0 rgb(231, 40, 75);
+}
+
+.form__input-error {
+    color: whitesmoke;
+    display: none;
+}
+
+.form__input-error-activo {
+    display: block;
+    margin-top: 3px;
+}
+
+#enter-button {
+    height: 30px;
+    width: 190px;
+    margin: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(181, 205, 251);
+    transition: .3s;
+    font-size: 17px;
+}
+
+#enter-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 rgb(48, 123, 228);
+}
+
+.login-t {
+    position: absolute;
+    top: 40px;
+    font-size: xx-large;
+}
+
+.butongoo {
+    width: 190px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.butongoo:hover {
+    box-shadow: 0 0 8px 0 rgb(187, 188, 188);
+    cursor: pointer;
+}
+
+.back-btn {
+    height: 30px;
+    width: 190px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(172, 159, 232);
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 100px;
+    font-size: 17px;
+    
+}
+
+.back-btn:hover {
+    box-shadow: 0 0 8px 0 rgb(127, 102, 241);
+}
+
+.continue-by-g {
+    width: 70px;
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ff8c00;
+    border-style: inset double;
+    border-radius: 10px;
+    width: 700px;
+    height: 200px;
+    font-size: 23px;
+    background-color: rgba(245, 245, 245, 0.873);
+    position: absolute;
+    top: 225px;
+    left: 425px;
+}
+
+.success-modal {
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(90deg, #8b11bf97 50%, #0bb6f9b7 100%);
+    position: fixed;
+    transition: all .4s;
+}
+
+.timeHeader {
+    background-color: #243981;
+    width: 650px;
+    height: 100px;
+}
+
+.go-out {
+    background-color: #FFFFFF;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border-color: rgb(0, 209, 237);
+    border-width: 3px;
+    font-size: large;
+    float: right;
+    cursor: pointer;
+    margin-top: 55px;
+    margin-right: 5px;
+}
+.go-out:hover{
+    box-shadow: 0px 0px 8px 0px rgba(0, 209, 237, 0.662);
+}
+
+.time-t {
+    color: #FFFFFF;
+    font-size: 33px;
+    float: right;
+    position: relative;
+    left: 100px;
+    margin: 10px;
+    cursor: default;
+}
+
+.time-logo {
+    width: 220px;
+    height: 155px;
+    float:left;
+    
+}
+
+.posting-box {
+    background-color: #599FDF;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#toPost{
+    width: 550px;
+    height: 120px;
+    margin-top: 15px;
+    margin-left: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    border: none;
+}
+#toPost:focus{
+    box-shadow: 0px 0px 8px 5px rgba(13, 99, 220, 0.618);
+    outline:auto rgba(127, 55, 199, 0.627);
+}
+
+.post{
+    background-color: #243981;
+    color: #FFFFFF;
+    font-size: large;
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color:rgb(255, 255, 255);
+    margin: 10px;
+    cursor: pointer;
+}
+.post:hover{
+    box-shadow: 0px 0px 4px 0px rgb(73, 74, 74);
+}
+
+.box1 {
+    background-color: #5978df;
+    width: 100%;
+    height: 200px;
+    
+}
+#exit-button, #stay-button{
+    width: 50px;
+    height: 25px;
+    border-width: 3px;
+    border-color:rgb(197, 50, 255);
+    background-color: rgb(206, 196, 248);
+    cursor: pointer;
+    margin-left: 30px;
+}
+#exit-button:hover{
+    box-shadow: 0px 0px 8px 0px rgb(231, 40, 75);
+}
+#stay-button:hover{
+    box-shadow: 0px 0px 8px 0px rgb(197, 50, 255);
+}
+
+@media (max-width: 400px),
+(max-width: 950px) {
+    section{
+        display: flex;
+    }
+    section > .gg-logo {
+        width: 350px;
+        height: 280px;
+    }
+
+    h1 {
+        top: 210px;
+        font-size: 25px;
+    }
+
+    h2 {
+        top: 260px;
+        font-size: 18px;
+    }
+
+    #log-in-btn {
+        margin-top: 80px;
+        width: 220px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    h4 {
+        top: 445px;
+    }
+
+    footer {
+        height: 50px;
+        text-align: center;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+    }
+
+    #createForm {
+        width: 390px;
+        margin-top: 120px;
+    }
+
+    #logForm {
+        width: 390px;
+        margin-top: 150px;
+    }
+
+    input {
+        margin-top: 30px;
+        height: 25px;
+        width: 300px;
+
+    }
+
+    #google-in {
+        height: 30px;
+        width: 250px;
+    }
+
+    .modal-content {
+        width: 350px;
+        height: 200px;
+        left: 18px;
+        bottom: 50px; 
+        font-size: 20px;
+    }
+    .continue-by-g {
+        width: 50px;
+    }
+    .timeHeader{
+        width: 100%;
+    }
+    .time-logo{
+        display: none;
+    }
+    .time-t{
+        float: left;
+        left: 10px;
+        margin: 5vh;
+    }
+    .go-out{
+        width: 115px;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .posting-box{
+        height: 100%;
+    }
+    #toPost{
+        width: 350px;
+        margin: 22px;
+        height: 60px;
+    }
+    .post{
+        margin-left: 25px;
+    }
+}
