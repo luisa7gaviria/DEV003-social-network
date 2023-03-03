@@ -71,7 +71,9 @@ export function login() {
     if (campos.mail && campos.password) {
       logAcc(iLogMail.value, iLogPassword.value)
         .then(() => {
+          loginSection.querySelector('.modal').classList.remove('success-modal');
           onNavigate('/muro');
+          logForm.reset();
         })
         .catch(() => {
           alert('Dirección de correo o contraseña incorrectos, inténtalo de nuevo.');
@@ -83,10 +85,12 @@ export function login() {
     googleLogIn()
       .then(() => {
         loginSection.querySelector('.modal').classList.add('success-modal');
+
+        loginSection.querySelector('.continue-by-g').addEventListener('click', () => {
+          loginSection.querySelector('.modal').classList.remove('success-modal');
+          onNavigate('/muro');
+        });
       });
-  });
-  loginSection.querySelector('.continue-by-g').addEventListener('click', () => {
-    onNavigate('/muro');
   });
 
   loginSection.querySelector('.back-btn').addEventListener('click', () => {

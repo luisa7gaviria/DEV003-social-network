@@ -1,5 +1,5 @@
 import { onNavigate } from '../router';
-import { exit, validateLog } from '../lib/functions';
+import { exit, validateLog, querySnapshot } from '../lib/functions';
 
 export function timeline() {
   const sectionTimeline = ` 
@@ -14,7 +14,7 @@ export function timeline() {
      <button class="post"> Publicar </button>
   </div>
 
-  <div class="box1"> 
+  <div class="timelineBox"> 
     <ul id="postList"> 
     </ul>
   </div>
@@ -32,25 +32,48 @@ export function timeline() {
 `;
   const timelineContent = document.createElement('section');
   timelineContent.innerHTML = sectionTimeline;
-  const exitModal = timelineContent.querySelector('.modal');
 
   timelineContent.querySelector('.go-out').addEventListener('click', () => {
-    exitModal.classList.add('success-modal');
+    timelineContent.querySelector('.modal').classList.add('success-modal');
   });
 
   timelineContent.querySelector('#exit-button').addEventListener('click', () => {
     exit()
       .then(() => {
         onNavigate('/');
-        window.location.reload();
       });
   });
 
   timelineContent.querySelector('#stay-button').addEventListener('click', () => {
-    exitModal.classList.remove('success-modal');
+    timelineContent.querySelector('.modal').classList.remove('success-modal');
   });
 
-  const postList = timelineContent.querySelector('#postList');
+  const setUpPosts = (data) => {
+    if (data) {
+      const postBox = `
+      <div class="postBox">
+       <div class="postContent">
+         <h2 class="postTitle"> ${data.Titulo} </h2>
+         <p> ${data.Descripcion} </p>
+        </div>
+      </div>
+
+      `;
+      const postsContainer = document.createElement('li');
+      postsContainer.innerHTML = postBox;
+
+      const postList = timelineContent.querySelector('#postList');
+      postList.appendChild(postsContainer);
+    }
+  };
+
+  querySnapshot().then((doc) => {
+    doc.forEach((cb) => {
+      const cbData = cb.data();
+      setUpPosts(cbData);
+    });
+  });
+
   validateLog();
   return timelineContent;
 }
