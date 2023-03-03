@@ -373,20 +373,45 @@ input:hover {
     box-shadow: 0px 0px 4px 0px rgb(73, 74, 74);
 }
 
-.box1 {
-    background-color: #5978df;
+.timelineBox{
     width: 100%;
-    height: 200px;
+    height: 100%;
     
 }
+#postList{
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 250px;
+    padding: 0;
+    margin: 0;
+}
+.postBox{
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.786);
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.postTitle{
+    position: initial;
+    color: rgb(0, 30, 72);
+}
+.postContent{
+    width: 600px;
+    height: 180px;
+    background: #2c99ff96;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 #exit-button, #stay-button{
-    width: 50px;
+    width: 80px;
     height: 25px;
     border-width: 3px;
     border-color:rgb(197, 50, 255);
     background-color: rgb(206, 196, 248);
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 #exit-button:hover{
     box-shadow: 0px 0px 8px 0px rgb(231, 40, 75);
@@ -494,5 +519,9 @@ input:hover {
     }
     .post{
         margin-left: 25px;
+    }
+    .postContent{
+        width: 350px;
+        height: 150px;
     }
 }

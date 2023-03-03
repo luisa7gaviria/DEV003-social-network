@@ -1,4 +1,4 @@
-// import { createAccount } from '../src/lib/auth';
+// import { createAccount } from '../src/lib/functions';
 import { create } from '../src/components/create';
 
 describe('probando el componete de registro', () => {
