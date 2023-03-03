@@ -2,7 +2,7 @@ import {
   GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword,
   signInWithEmailAndPassword, signOut,
 } from 'firebase/auth';
-import { getDocs, collection } from 'firebase/firestore';
+import { getDocs, collection, addDoc } from 'firebase/firestore';
 import { auth, db } from '../firebaseconf';
 
 const provider = new GoogleAuthProvider();
@@ -16,6 +16,10 @@ export const logAcc = (mail, password) => signInWithEmailAndPassword(auth, mail,
 export const exit = () => signOut(auth);
 
 export const querySnapshot = () => getDocs(collection(db, 'Posts'));
+
+export const addPost = (text) => addDoc(collection(db, 'Posts'), {
+  Descripcion: text,
+});
 
 export const validateLog = () => {
   auth.onAuthStateChanged((user) => {

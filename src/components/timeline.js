@@ -1,5 +1,7 @@
 import { onNavigate } from '../router';
-import { exit, validateLog, querySnapshot } from '../lib/functions';
+import {
+  exit, validateLog, querySnapshot, addPost,
+} from '../lib/functions';
 
 export function timeline() {
   const sectionTimeline = ` 
@@ -72,6 +74,12 @@ export function timeline() {
       const cbData = cb.data();
       setUpPosts(cbData);
     });
+  });
+
+  timelineContent.querySelector('.post').addEventListener('click', () => {
+    const textPost = timelineContent.querySelector('#toPost');
+    addPost(textPost.value);
+    console.log(textPost.value);
   });
 
   validateLog();
