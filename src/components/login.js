@@ -1,6 +1,6 @@
 import { googleLogIn, logAcc } from '../lib/auth';
 
-import { onNavigate } from '../router';
+import onNavigate from '../onNavigate';
 import { validateForm } from '../validator';
 import { campos } from './create';
 

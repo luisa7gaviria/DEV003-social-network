@@ -1,4 +1,4 @@
-import { onNavigate } from '../router';
+import onNavigate from '../onNavigate';
 import { validateForm } from '../validator';
 import { createAccount } from '../lib/auth';
 
@@ -62,6 +62,11 @@ export const create = () => {
   inputs.forEach((input) => {
     input.addEventListener('keyup', (e) => {
       validateForm(e.target);
+      // if(validateForm(e.target);){
+      //   // poner el color
+      // }else {
+      //   // quitar el color 
+      // }
     });
   });
 

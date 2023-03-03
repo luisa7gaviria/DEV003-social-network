@@ -3,23 +3,28 @@
 import { createAccount } from '../src/lib/auth';
 
 import { create } from '../src/components/create';
-console.log(create)
 
 describe('Testing createAccount function', () => {
   it('should be a function', () => {
     expect(typeof createAccount).toBe('function');
   });
-
 });
-
 
 describe.only('probar el componete de registro', () => {
   it('si el usuario y la contraseñá son validos dbemos mostrar un modal', () => {
-    document.body.innerHTML = create()
+    document.body.append(create());
+    const form = document.getElementById("createForm");
 
-    const form  = document.getElementById("createForm");
+    // necesitamos un mock de la promesa
 
-    expect(form).not.toBe(null)
+    // ejecutar el submit
+    
+    // si la promesa se resuelve 
+      // expect el modal debe existir 
+
+    // si no 
+      // expect el mensaje de error debe existir 
+
+    expect(form).not.toBe(null);
   });
-
 });

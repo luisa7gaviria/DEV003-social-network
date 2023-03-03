@@ -1,4 +1,4 @@
-import { onNavigate } from '../router';
+import onNavigate from '../onNavigate';
 import { exit } from '../lib/auth';
 
 export const timeline = () => {
