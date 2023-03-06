@@ -13,6 +13,7 @@ import {
   deleteDoc,
   orderBy,
   query,
+  onSnapshot,
 } from 'firebase/firestore';
 import { auth, db } from '../firebaseconf';
 
@@ -36,6 +37,5 @@ export const addPost = (text) => {
 };
 
 export const q = query(collection(db, 'Posts'), orderBy('Time', 'desc'));
-export const querySnapshot = () => getDocs(q);
-
+export const updatePosts = (cb) => onSnapshot(q, cb);
 export const deletePost = (idPost) => deleteDoc(doc(db, 'Posts', idPost));

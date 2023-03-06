@@ -1,5 +1,5 @@
 import {
-  exit, querySnapshot, addPost, deletePost,
+  exit, addPost, deletePost, updatePosts,
 } from '../lib/functions';
 
 export const timeline = (onNavigate) => {
@@ -100,12 +100,18 @@ export const timeline = (onNavigate) => {
     }
   };
 
-  querySnapshot().then((doc) => {
-    doc.forEach((cb) => {
+  updatePosts((querySnapshot) => {
+    querySnapshot.forEach((cb) => {
       const cbData = cb;
       setUpPosts(cbData);
     });
   });
+  // querySnapshot().then((doc) => {
+  //   doc.forEach((cb) => {
+  //     const cbData = cb;
+  //     setUpPosts(cbData);
+  //   });
+  // });
 
   const postBtn = timelineContent.querySelector('#post');
   postBtn.disabled = true;
