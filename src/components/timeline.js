@@ -78,7 +78,9 @@ export function timeline() {
 
   timelineContent.querySelector('.post').addEventListener('click', () => {
     const textPost = timelineContent.querySelector('#toPost');
-    addPost(textPost.value);
+    addPost(textPost.value).then(() => {
+      alert('Posteado con éxito');
+    });
     console.log(textPost.value);
   });
 
