@@ -1,10 +1,7 @@
 import { googleLogIn, logAcc } from '../lib/functions';
+import { inputStatus, validateLoginForm } from '../validator/validator';
 
-import { onNavigate } from '../router';
-import { validateForm } from '../validator';
-import { campos } from './create';
-
-export function login() {
+export const login = (onNavigate) => {
   const createLoginContent = `
   <h1 class="login-t"> INICIAR SESIÓN </h1>
     <form id="logForm"> 
@@ -17,7 +14,7 @@ export function login() {
       <div class="group-pass" id="group__password">
         <input id="password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
         <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, <br> números y algún carácter especial sin espacios.</p>
-        <img src="Images/ojof.png" class="showPassword">
+        <img src="Images/ojo.png" class="showPassword">
         </div>
 
       <div>
@@ -47,7 +44,7 @@ export function login() {
 
   loginInputs.forEach((input) => {
     input.addEventListener('keyup', (e) => {
-      validateForm(e.target);
+      validateLoginForm(e.target);
     });
   });
 
@@ -68,7 +65,7 @@ export function login() {
 
   logForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (campos.mail && campos.password) {
+    if (inputStatus.mail && inputStatus.password) {
       logAcc(iLogMail.value, iLogPassword.value)
         .then(() => {
           loginSection.querySelector('.modal').classList.remove('success-modal');
@@ -98,4 +95,4 @@ export function login() {
   });
 
   return loginSection;
-}
+};

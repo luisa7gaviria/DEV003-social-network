@@ -11,16 +11,18 @@ const routes = {
   '/iniciar-sesion': login(),
   '/muro': timeline(),
 };
-
-export const onNavigate = (pathname) => {
+export function onNavigate(pathname) {
   window.history.pushState(
     {},
     pathname,
     window.location.origin + pathname,
   );
   rootDiv.replaceChild(routes[pathname], rootDiv.firstChild);
-};
+}
+const component = routes[window.location.pathname];
 
 window.onpopstate = () => {
-  rootDiv.replaceChild(routes[window.location.pathname], rootDiv.firstChild);
+  rootDiv.replaceChild(component, rootDiv.firstChild);
 };
+
+rootDiv.replaceChild(component, rootDiv.firstChild);

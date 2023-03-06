@@ -1,14 +1,7 @@
-import { onNavigate } from '../router';
-import { validateForm } from '../validator';
+import { inputStatus, validateCreateForm } from '../validator/validator';
 import { createAccount } from '../lib/functions';
 
-export const campos = {
-  name: false,
-  mail: false,
-  password: false,
-};
-
-export function create() {
+export function create(onNavigate) {
   const createComponentContent = `
   <h1 class="create-t">CREAR CUENTA</h1>
   <form id="createForm">
@@ -26,7 +19,7 @@ export function create() {
       <div id="group__password" class="group-pass"> 
          <input id= "password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
          <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, números y algún carácter especial sin espacios. </p>
-         <img src="Images/ojof.png" class="showPassword">
+         <img src="Images/ojo.png" class="showPassword">
          </div>
     
      <div id="group__passwordtwo" class="group-pass">
@@ -61,7 +54,7 @@ export function create() {
 
   inputs.forEach((input) => {
     input.addEventListener('keyup', (e) => {
-      validateForm(e.target);
+      validateCreateForm(e.target);
     });
   });
 
@@ -97,10 +90,9 @@ export function create() {
 
   myForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (campos.name && campos.mail && campos.password) {
+    if (inputStatus.name && inputStatus.mail && inputStatus.password) {
       createAccount(mailInput.value, input1.value)
         .then(() => {
-          console.log('se creó');
           section.querySelector('.modal').classList.add('success-modal');
         })
         .catch(() => {

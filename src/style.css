@@ -285,7 +285,7 @@ input:hover {
 .success-modal {
     opacity: 1;
     visibility: visible;
-    background: linear-gradient(90deg, #8b11bf97 50%, #0bb6f9b7 100%);
+    background: linear-gradient(90deg, #8b37af97 50%, #3ab9ebb7 100%);
     position: fixed;
     transition: all .4s;
 }
@@ -357,7 +357,7 @@ input:hover {
     outline:auto rgba(127, 55, 199, 0.627);
 }
 
-.post{
+#post{
     background-color: #243981;
     color: #FFFFFF;
     font-size: large;
@@ -369,10 +369,18 @@ input:hover {
     margin: 10px;
     cursor: pointer;
 }
-.post:hover{
+#post:hover{
     box-shadow: 0px 0px 4px 0px rgb(73, 74, 74);
 }
-
+#post:disabled{
+    background-color: #6276b8;
+}
+.counter{
+    margin: 0;
+    position: absolute;
+    top: 260px;
+    right: 230px;
+}
 .timelineBox{
     width: 100%;
     height: 100%;
@@ -381,7 +389,7 @@ input:hover {
 #postList{
     list-style: none;
     display: grid;
-    grid-template-rows: 1fr 250px;
+    grid-template-rows: 1fr;
     padding: 0;
     margin: 0;
 }
@@ -403,6 +411,40 @@ input:hover {
     background: #2c99ff96;
     border-radius: 10px;
     margin-top: 10px;
+}
+#deletePost, #editPost{
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    font-family: cursive;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-width: 3px;
+    border-color: #599FDF;
+    background: #d8dcff;
+    border-radius: 50px;
+    cursor: pointer;
+    flex-direction: row-reverse;
+}
+#editPost{
+    margin-right: 20px; 
+}
+#deletePost img {
+    width: 22px;
+    height: 22px;
+}
+#editPost img{
+    width: 24px;
+    height: 24px;
+}
+.buttonsContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    bottom: 36px;
+    right: 25px;
 }
 #exit-button, #stay-button{
     width: 80px;

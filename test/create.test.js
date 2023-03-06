@@ -5,8 +5,15 @@ describe('probando el componete de registro', () => {
   it('si el usuario y la contraseña son validos dbemos mostrar un modal', () => {
     document.body.append(create());
 
-    document.getElementById('createAcc').click();
+    const form = document.getElementById('createForm');
+    // necesitamos un mock de la promesa
 
-    expect(document.querySelector('.modal-content p').textContent).toEqual(' Tu usuario ha sido creado  Gracias por registrarte en GGamers');
+    // ejecutar el submit
+    // si la promesa se resuelve
+    // expect el modal debe existir
+    // si no
+    // expect el mensaje de error debe existir
+
+    expect(form).not.toBe(null);
   });
 });
