@@ -435,6 +435,22 @@ input:hover {
     width: 22px;
     height: 22px;
 }
+.delete-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+.delete-modal-activo{
+    opacity: 1;
+    visibility: visible;
+    background: rgba(255, 255, 255, 0);
+    position: fixed;
+    transition: all .4s;
+}
 #editPost img{
     width: 24px;
     height: 24px;
