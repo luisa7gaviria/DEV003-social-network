@@ -155,6 +155,7 @@ export const timeline = (onNavigate) => {
   });
 
   updatePosts((querySnapshot) => {
+    timelineContent.querySelector('#postList').innerHTML = '';
     querySnapshot.forEach((doc) => {
       const data = doc.data();
       console.log(doc.data());
