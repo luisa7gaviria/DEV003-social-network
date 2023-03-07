@@ -7,15 +7,16 @@ import {
 } from 'firebase/auth';
 import {
   doc,
-  getDocs,
   collection,
   addDoc,
   deleteDoc,
+  updateDoc,
   orderBy,
   query,
   onSnapshot,
 } from 'firebase/firestore';
 import { auth, db } from '../firebaseconf';
+import { showTime } from '../setDate';
 
 const provider = new GoogleAuthProvider();
 
@@ -32,10 +33,16 @@ export const addPost = (text) => {
   return addDoc(collection(db, 'Posts'), {
     User: user.uid,
     Descripcion: text,
-    Time: new Date(),
+    Time: showTime(),
   });
 };
 
-export const q = query(collection(db, 'Posts'), orderBy('Time', 'desc'));
-export const updatePosts = (cb) => onSnapshot(q, cb);
+const q = query(collection(db, 'Posts'), orderBy('Time', 'desc'));
+
+export const updatePosts = (cb) => onSnapshot(q, (cb));
+
 export const deletePost = (idPost) => deleteDoc(doc(db, 'Posts', idPost));
+
+export const editPost = (editing, idPost) => updateDoc(doc(db, 'Posts', idPost), {
+  Descripcion: editing,
+});
