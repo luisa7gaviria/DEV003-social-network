@@ -64,9 +64,18 @@ export const timeline = (onNavigate) => {
         const postBox = `
         <div class="postBox">
          <div class="postContent">
-           <h2 class="postTitle"> ${postsData.User} </h2>
+           <h2 class="postTitle"> ${postsData.Name} </h2>
            <p> ${postsData.Descripcion} </p>
            <span class="actTime"> ${postsData.Time} </span>
+
+           <div class = "buttonsContainer">
+             <button id ="deletePost"> Eliminar
+               <img src="Images/trash-bin.png">
+             </button>
+               <button id="editPost"> Editar
+                 <img src="Images/editar.png">
+               </button>
+           </div>
           </div>
         </div>
   
@@ -79,22 +88,24 @@ export const timeline = (onNavigate) => {
            </div>
           </div>
       </div>
+
+      <div class="edit-modal"> 
+        <div class="modal-content">
+          <textarea id="editablePost" maxlength="180" cols="50"> </textarea>
+          <div class="edit-confirmation" >
+             <button id="save-edit" > Guardar </button>
+             <button id="cancel-edit" > Cancelar </button>
+           </div>
+          </div>
+      </div>
   
         `;
         const postsContainer = document.createElement('li');
         postsContainer.innerHTML = postBox;
 
-        // botón de borrar
-        const buttonDelete = document.createElement('button');
-        buttonDelete.innerText = 'Eliminar';
-        buttonDelete.setAttribute('id', 'deletePost');
-        const iconDelete = document.createElement('img');
-        iconDelete.src = 'Images/trash-bin.png';
-        buttonDelete.appendChild(iconDelete);
+        const deleteModal = postsContainer.querySelector('.delete-modal'); // guardamos el modal de borrar
 
-        const deleteModal = postsContainer.querySelector('.delete-modal'); // guardamos el modal
-
-        buttonDelete.addEventListener('click', () => {
+        postsContainer.querySelector('#deletePost').addEventListener('click', () => {
           deleteModal.classList.add('delete-modal-activo');
         });
         postsContainer.querySelector('#yes-delete').addEventListener('click', () => {
@@ -106,29 +117,27 @@ export const timeline = (onNavigate) => {
           deleteModal.classList.remove('delete-modal-activo');
         });
 
-        // botón de editar
-        const buttonEdit = document.createElement('button');
-        buttonEdit.innerText = 'Editar';
-        buttonEdit.setAttribute('id', 'editPost');
-        const iconEdit = document.createElement('img');
-        iconEdit.src = 'Images/editar.png';
-        buttonEdit.appendChild(iconEdit);
-
-        buttonEdit.addEventListener('click', () => {
-          editPost('modificado', postId);
+        const editModal = postsContainer.querySelector('.edit-modal'); // guardamos el modal de editar
+        postsContainer.querySelector('#editPost').addEventListener('click', () => {
+          editModal.classList.add('edit-modal-activo');
         });
 
-        // div contendor de botones
-        const buttonsContainer = document.createElement('div');
-        buttonsContainer.setAttribute('class', 'buttonsContainer');
-        buttonsContainer.appendChild(buttonDelete);
-        buttonsContainer.appendChild(buttonEdit);
+        // segundo textarea
 
-        // pasamos los botones a nuestro contenedor de posts
-        postsContainer.appendChild(buttonsContainer);
+        const editTextarea = postsContainer.querySelector('#editablePost');
+        editTextarea.value = postsData.Descripcion; // asignamos al textarea el valor de cada post
+
+        postsContainer.querySelector('#save-edit').addEventListener('click', () => {
+          editPost(editTextarea.value, postId);
+        });
+
+        postsContainer.querySelector('#cancel-edit').addEventListener('click', () => {
+          editModal.classList.remove('edit-modal-activo');
+        });
+
         // condición para que solo el usuario manipule sus propios posts
         if (auth.currentUser.uid !== postsData.User) {
-          buttonsContainer.style.display = 'none';
+          postsContainer.querySelector('.buttonsContainer').style.display = 'none';
         }
 
         const postList = timelineContent.querySelector('#postList');
@@ -159,6 +168,7 @@ export const timeline = (onNavigate) => {
     addPost(textPost.value).then(() => {
       textPost.value = '';
       count.innerHTML = '';
+      postBtn.disabled = true;
     });
   });
 

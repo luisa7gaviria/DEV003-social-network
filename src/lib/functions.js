@@ -29,7 +29,11 @@ export const exit = () => signOut(auth);
 
 export const addPost = (text) => {
   const user = auth.currentUser;
+  if (user.displayName === null || undefined) {
+    user.displayName = 'Gamer Anónimo';
+  }
   return addDoc(collection(db, 'Posts'), {
+    Name: user.displayName,
     User: user.uid,
     Descripcion: text,
     Time: showTime(),
