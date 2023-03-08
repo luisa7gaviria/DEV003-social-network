@@ -13,7 +13,6 @@ import {
   updateDoc,
   orderBy,
   query,
-  onSnapshot,
 } from 'firebase/firestore';
 import { auth, db } from '../firebaseconf';
 import { showTime } from '../setDate';
@@ -34,12 +33,11 @@ export const addPost = (text) => {
     User: user.uid,
     Descripcion: text,
     Time: showTime(),
+    Likes: [],
   });
 };
 
-const q = query(collection(db, 'Posts'), orderBy('Time', 'desc'));
-
-export const updatePosts = (cb) => onSnapshot(q, (cb));
+export const q = query(collection(db, 'Posts'), orderBy('Time', 'desc'));
 
 export const deletePost = (idPost) => deleteDoc(doc(db, 'Posts', idPost));
 
