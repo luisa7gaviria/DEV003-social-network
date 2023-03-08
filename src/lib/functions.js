@@ -13,6 +13,8 @@ import {
   updateDoc,
   orderBy,
   query,
+  arrayUnion,
+  arrayRemove,
 } from 'firebase/firestore';
 import { auth, db } from '../firebaseconf';
 import { showTime } from '../setDate';
@@ -48,3 +50,5 @@ export const deletePost = (idPost) => deleteDoc(doc(db, 'Posts', idPost));
 export const editPost = (editing, idPost) => updateDoc(doc(db, 'Posts', idPost), {
   Descripcion: editing,
 });
+
+export const sumLike = () => updateDoc(doc(db, 'likes', idPost));

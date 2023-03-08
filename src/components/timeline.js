@@ -67,7 +67,10 @@ export const timeline = (onNavigate) => {
            <h2 class="postTitle"> ${postsData.Name} </h2>
            <p> ${postsData.Descripcion} </p>
            <span class="actTime"> ${postsData.Time} </span>
-
+           <div class= "likePost"> 
+             <img src="Images/heart.png">
+             <p> ${postsData.Likes.length} </p>
+           </div>
            <div class = "buttonsContainer">
              <button id ="deletePost"> Eliminar
                <img src="Images/trash-bin.png">

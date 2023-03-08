@@ -467,6 +467,9 @@ input:hover {
     display: flex;
     flex-direction: row-reverse;
 }
+.likePost{
+    display: flex;
+}
 #exit-button, #stay-button{
     width: 80px;
     height: 25px;
