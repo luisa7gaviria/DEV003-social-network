@@ -435,7 +435,7 @@ input:hover {
     width: 22px;
     height: 22px;
 }
-.delete-modal {
+.delete-modal, .edit-modal {
     position: absolute;
     top: 0;
     right: 0;
@@ -447,9 +447,17 @@ input:hover {
 .delete-modal-activo{
     opacity: 1;
     visibility: visible;
-    background: rgba(255, 255, 255, 0);
+    background: linear-gradient(90deg, #8b37af97 50%, #3ab9ebb7 100%);
     position: fixed;
     transition: all .4s;
+}
+.edit-modal-activo{
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(90deg, #8b37af97 50%, #3ab9ebb7 100%);
+    position: fixed;
+    transition: all .4s;
+    
 }
 #editPost img{
     width: 24px;
@@ -458,9 +466,6 @@ input:hover {
 .buttonsContainer{
     display: flex;
     flex-direction: row-reverse;
-    position: relative;
-    bottom: 36px;
-    right: 25px;
 }
 #exit-button, #stay-button{
     width: 80px;
