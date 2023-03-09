@@ -68,8 +68,9 @@ export const timeline = (onNavigate) => {
            <p> ${postsData.Descripcion} </p>
            <span class="actTime"> ${postsData.Time} </span>
            <div class= "likePost"> 
-             <img id="likeBtn" src="Images/heart.png">
+             <img id="likeBtn" src="Images/like.png">
              <p class="totalLikes"> ${postsData.Likes.length} </p>
+                       
            </div>
            <div class = "buttonsContainer">
              <button id ="deletePost"> Eliminar
@@ -93,8 +94,9 @@ export const timeline = (onNavigate) => {
       </div>
 
       <div class="edit-modal"> 
-        <div class="modal-content">
+        <div class="modal-content"> 
           <textarea id="editablePost" maxlength="180" cols="50"> </textarea>
+          <p class="counter2"><span id="count2"></span> / 180 </p>
           <div class="edit-confirmation" >
              <button id="save-edit" > Guardar </button>
              <button id="cancel-edit" > Cancelar </button>
@@ -128,7 +130,13 @@ export const timeline = (onNavigate) => {
         // segundo textarea
 
         const editTextarea = postsContainer.querySelector('#editablePost');
+        const count2 = postsContainer.querySelector('#count2');
         editTextarea.value = postsData.Descripcion; // asignamos al textarea el valor de cada post
+
+        editTextarea.addEventListener('keyup', (e) => {
+          const targetEdit = e.target.value;
+          count2.innerHTML = targetEdit.length;
+        });
 
         postsContainer.querySelector('#save-edit').addEventListener('click', () => {
           editPost(editTextarea.value, postId);
@@ -144,9 +152,11 @@ export const timeline = (onNavigate) => {
         const likeBtn = postsContainer.querySelector('#likeBtn');
         likeBtn.addEventListener('click', () => {
           if (!userStatus) {
+            likeBtn.classList.add('liked');
             sumLike(postId, auth.currentUser.uid);
             userStatus = true; // estado true = likeó
           } else if (userStatus) { // si ya likeó puede retirar su like y vuelve a false
+            likeBtn.classList.remove('liked');
             removeLike(postId, auth.currentUser.uid);
             userStatus = false;
           }
@@ -169,7 +179,7 @@ export const timeline = (onNavigate) => {
   const textPost = timelineContent.querySelector('#toPost');
   const count = timelineContent.querySelector('#count');
 
-  // contando los carácteres que se están escribiendo en el text area
+  // contando los carácteres que se están escribiendo en el textarea
   textPost.addEventListener('keyup', (e) => {
     const targetInput = e.target.value;
     // habilitamos/deshabilitamos segun la longitud de los caracteres
