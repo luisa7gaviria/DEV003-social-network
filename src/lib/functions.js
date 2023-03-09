@@ -31,6 +31,7 @@ export const exit = () => signOut(auth);
 
 export const addPost = (text) => {
   const user = auth.currentUser;
+
   if (user.displayName === null || undefined) {
     user.displayName = 'Gamer Anónimo';
   }
@@ -51,4 +52,10 @@ export const editPost = (editing, idPost) => updateDoc(doc(db, 'Posts', idPost),
   Descripcion: editing,
 });
 
-export const sumLike = () => updateDoc(doc(db, 'likes', idPost));
+export const sumLike = (idPost, userId) => updateDoc(doc(db, 'Posts', idPost), {
+  Likes: arrayUnion(userId),
+});
+
+export const removeLike = (idPost, userId) => updateDoc(doc(db, 'Posts', idPost), {
+  Likes: arrayRemove(userId),
+});
