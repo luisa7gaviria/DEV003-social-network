@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body {
-    background-image: url(../src/Images/fondo.jpg);
+    background-image: url(../src/Images/Galaxy.jpg);
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
@@ -13,6 +13,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.gg-logo{
+    width: 540px;
 }
 
 h1 {
@@ -39,11 +42,13 @@ h2 {
     border: transparent;
     margin-top: 45px;
     cursor: pointer;
+    transition: .3s;
 }
 
 #log-in-btn:hover {
-    border-color: rgb(255, 170, 255);
+    border: 2px solid rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 mediumorchid;
+    background-color: #d9ddeae4;
 }
 
 h4 {
@@ -60,13 +65,14 @@ h4 {
     cursor: pointer;
     text-decoration: underline 1.5px solid white;
     color: white;
+    font-size: 17px;
 
 }
 
 #go-to-register:hover {
-    color: dodgerblue;
+    color: rgb(84, 169, 255);
     text-decoration: underline 1.5px solid dodgerblue;
-    text-shadow: 0px 0px 3px #6c89a4;
+    text-shadow: 0px 0px 3px #313941;
 }
 
 section {
@@ -135,6 +141,8 @@ a {
 #createAcc:hover {
     cursor: pointer;
     box-shadow: 0 0 8px 0 rgb(13, 99, 220);
+    border: 2px solid white;
+    background-color: #d9ddeae4;
 }
 
 #logForm {
@@ -161,7 +169,6 @@ input {
     padding: 5px;
     outline: none;
     border: 2px;
-    transition: .3s;
 }
 
 input:hover {
@@ -181,12 +188,12 @@ input:hover {
 }
 
 .correct-input:focus {
-    border-color: rgb(39, 167, 54);
+    border: 1px solid rgb(39, 167, 54);
     box-shadow: 0 0 8px 0 rgb(5, 255, 13);
 }
 
 .incorrect-input:focus {
-    border-color: rgb(232, 18, 14);
+    border: 1px solid rgb(232, 18, 14);
     box-shadow: 0 0 8px 0 rgb(231, 40, 75);
 }
 
@@ -203,7 +210,7 @@ input:hover {
 #enter-button {
     height: 30px;
     width: 190px;
-    margin: 35px;
+    margin: 50px;
     border-radius: 5px;
     border: none;
     background-color: rgb(181, 205, 251);
@@ -213,7 +220,9 @@ input:hover {
 
 #enter-button:hover {
     cursor: pointer;
-    box-shadow: 0 0 8px 0 rgb(48, 123, 228);
+    box-shadow: 0 0 8px 0 rgb(95, 162, 255);
+    border: 2px solid white;
+    background-color: #d9ddeae4;
 }
 
 .login-t {
@@ -247,7 +256,9 @@ input:hover {
 }
 
 .back-btn:hover {
-    box-shadow: 0 0 8px 0 rgb(127, 102, 241);
+    box-shadow: 0 0 8px 0 rgb(151, 128, 255);
+    border: 2px solid white;
+    background-color: #d9ddeae4;
 }
 
 .continue-by-g {
@@ -339,6 +350,13 @@ input:hover {
     align-items: flex-start;
     justify-content: center;
 }
+.post-box-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6276b865;
+}
 
 #toPost{
     width: 550px;
@@ -376,10 +394,7 @@ input:hover {
     background-color: #6276b8;
 }
 .counter{
-    margin: 0;
-    position: absolute;
-    top: 260px;
-    right: 230px;
+    margin-right: 20px;
 }
 .timelineBox{
     width: 100%;
@@ -411,6 +426,11 @@ input:hover {
     background: #2c99ff96;
     border-radius: 10px;
     margin-top: 10px;
+}
+.actTime{
+    position: relative;
+    top: 20px;
+    left: 220px;
 }
 #deletePost, #editPost{
     width: 100px;
@@ -451,6 +471,19 @@ input:hover {
     position: fixed;
     transition: all .4s;
 }
+.delete-confirmation{
+    margin: 10px;
+}
+#yes-delete, #no-delete{
+    width: 80px;
+    height: 25px;
+    border-width: 3px;
+    border-color:rgb(197, 50, 255);
+    background-color: rgb(206, 196, 248);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
 .edit-modal-activo{
     opacity: 1;
     visibility: visible;
@@ -459,9 +492,38 @@ input:hover {
     transition: all .4s;
     
 }
+#editablePost {
+    resize: none;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 5px 0px rgb(187, 188, 188);
+    border-radius: 10px;
+    height: 150px;
+    margin-top: 10px;
+}
+.counter2 {
+    font-size: 15px;
+    margin: 5px;
+}
+#editablePost:focus{
+    box-shadow: 0px 0px 4px 1px rgba(220, 148, 13, 0.512);
+}
 #editPost img{
     width: 24px;
     height: 24px;
+}
+.edit-confirmation {
+    margin: 10px;
+}
+#save-edit, #cancel-edit {
+    width: 80px;
+    height: 25px;
+    border-width: 3px;
+    border-color:rgb(197, 50, 255);
+    background-color: rgb(206, 196, 248);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 .buttonsContainer{
     display: flex;
@@ -474,17 +536,15 @@ input:hover {
     position: relative;
     left:10px;
     top:30px;
-    
 }
-
-.likePost img{
+#likeBtn{
     border-radius: 16px;
-
-}
-.liked{
     box-shadow: 0px 0px 5px 0px rgb(231, 40, 75);
+    cursor: pointer;
 }
-
+.totalLikes {
+    margin-left: 5px;
+}
 #exit-button, #stay-button{
     width: 80px;
     height: 25px;
@@ -492,6 +552,7 @@ input:hover {
     border-color:rgb(197, 50, 255);
     background-color: rgb(206, 196, 248);
     cursor: pointer;
+    border-radius: 5px;
     margin-left: 10px;
 }
 #exit-button:hover{
@@ -550,23 +611,32 @@ input:hover {
         width: 390px;
         margin-top: 150px;
     }
+    .form__input-error {
+        font-size: 12px;
+    }
 
     input {
-        margin-top: 30px;
+        margin-top: 45px;
         height: 25px;
         width: 300px;
 
     }
-
+    .showPassword {
+        bottom: 25%;
+    }
+    #enter-button {
+        margin-top: 70px;
+    }
     #google-in {
         height: 30px;
         width: 250px;
+        margin-top: 20px;
     }
 
     .modal-content {
-        width: 350px;
+        width: 340px;
         height: 200px;
-        left: 18px;
+        left: 25px;
         bottom: 50px; 
         font-size: 20px;
     }
@@ -582,12 +652,12 @@ input:hover {
     .time-t{
         float: left;
         left: 10px;
-        margin: 5vh;
+        margin: 3vh;
     }
     .go-out{
-        width: 115px;
+        width: 100px;
         height: 30px;
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 30px;
     }
     .posting-box{
@@ -598,11 +668,56 @@ input:hover {
         margin: 22px;
         height: 60px;
     }
-    .post{
-        margin-left: 25px;
+    #post{
+        width: 90px;
+        font-size: 15px;
+        height: 25px;
     }
     .postContent{
         width: 350px;
         height: 150px;
     }
+    .post-box-footer{
+        height: 30px;
+    }
+    .likePost{
+        top: 15px;
+        left: 5px;
+    }
+    .buttonsContainer {
+        height: 25px;
+        position: relative;
+        bottom: 3px;
+    }
+    #editPost, #deletePost{
+        width: 80px;
+        height: 25px;
+    }
+    #likeBtn {
+        width: 25px;
+        height: 25px;
+        margin-top: 8px;
+    }
+    #editablePost {
+        width: 250px;
+        height: 75px;
+    }
+    .counter2 {
+        font-size: 15px;
+    }
+    #save-edit, #cancel-edit {
+        width: 80px;
+        height: 25px;
+        border-width: 3px;
+         border-color:rgb(197, 50, 255);
+         background-color: rgb(206, 196, 248);
+         cursor: pointer;
+         margin-left: 10px;
+         border-radius: 5px;
+    }
+    .actTime {
+        left: 100px;
+        font-size: 13px;
+    }
+    
 }
