@@ -3,9 +3,13 @@
 ## Definición del producto:
 Para comenzar a definir qué tipo de red social nos gustaría realizar, comenzamos con nuestro equipo a generar distintas ideas de propuestas de los cuales surgieron las siguientes: Perros, Gamers, Gatos, Comida Saludable, Skincare, Yoga y Cactus y suculentas.
 Luego realizamos un pequeño formulario con la siguiente pregunta ¿Si tuvieras que crear una red social ¿Qué temática te gustaría? la cual fue enviada a usuarios de distintos grupos etarios. La encuesta estuvo habilitada un día, en dónde logramos conseguir el siguiente resultado:
-ACA VA UN GRAFICO
+
+![image](https://user-images.githubusercontent.com/118920026/224780024-df80896b-9be4-47ef-9548-3321b49c6432.png)
+
 El ganador fue Gamers. Además, les preguntamos a los usuarios ¿De qué color les gustaría que fuese la red social? Y los ganadores fueron: negro, azul, morado, rojo y blanco, tal como se muestra en el gráfico. 
-ACÁ VA OTRO GRÁFICO
+
+![image](https://user-images.githubusercontent.com/118920026/224780117-028fdb17-de39-44f6-9e34-77521640f130.png)
+
 
 ## Historias de usuario:
 
@@ -190,6 +194,9 @@ Definición de terminado:
 
 Para la estructura de la aplicación definimos unos prototipos de baja y de alta fidelidad. Al principio utilizamos como fondo el color negro, según lo indicado por los usuarios y colores neón, partiendo de ese primer prototipo, se realizó un test de usabilidad y estos son las observaciones que nos dieron los usuarios: 
 
+![image](https://user-images.githubusercontent.com/118920026/224780431-12e4b45f-1fac-4648-a9ba-8395003d447d.png)
+
+
 Una vez hecho el testo y teniendo en cuenta las observaciones, logramos sacar un prototipo más oficial de la aplicación para versión móvil y desktop, el cual dejamos a continuación:
 
 a.	Alta y baja de Móvil: https://www.figma.com/file/2RdpYobNiY8pjVAMC2s8xV/Prototipos-M%C3%B3vil?t=2sJJrvphWNInRbP5-0
@@ -199,6 +206,9 @@ a.	Alta y baja de Móvil: https://www.figma.com/file/2RdpYobNiY8pjVAMC2s8xV/Prot
 b.	Alta y baja de Desktop: https://www.figma.com/file/SuZ0j9VbEHoW29H73jsouS/Prototipos-Desktop?node-id=141%3A96&t=2sJJrvphWNInRbP5-0
 
 Se realizó un último cambió, según un nuevo test de usabilidad, el cual quedó de la siguiente manera:
+
+![image](https://user-images.githubusercontent.com/118920026/224780332-ee19e7c4-0719-4ed7-a4bc-907a6ccdb79d.png)
+
 
 
 
