@@ -6,6 +6,6 @@ export const showTime = () => {
   const year = myDate.getFullYear();
   const month = myDate.getMonth() + 1;
   const day = myDate.getDate();
-  const date = (`${hours}:${minutes}:${seconds} ${year}-${month}-${day}`).toString();
+  const date = (`${hours}:${minutes}:${seconds} ${year}-${month}-${day}`);
   return date;
 };

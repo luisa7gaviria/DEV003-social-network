@@ -1,3 +1,214 @@
+# README GGAMERS
+
+## Definición del producto:
+Para comenzar a definir qué tipo de red social nos gustaría realizar, comenzamos con nuestro equipo a generar distintas ideas de propuestas de los cuales surgieron las siguientes: Perros, Gamers, Gatos, Comida Saludable, Skincare, Yoga y Cactus y suculentas.
+Luego realizamos un pequeño formulario con la siguiente pregunta ¿Si tuvieras que crear una red social ¿Qué temática te gustaría? la cual fue enviada a usuarios de distintos grupos etarios. La encuesta estuvo habilitada un día, en dónde logramos conseguir el siguiente resultado:
+ACA VA UN GRAFICO
+El ganador fue Gamers. Además, les preguntamos a los usuarios ¿De qué color les gustaría que fuese la red social? Y los ganadores fueron: negro, azul, morado, rojo y blanco, tal como se muestra en el gráfico. 
+ACÁ VA OTRO GRÁFICO
+
+## Historias de usuario:
+
+Después de una breve investigación hemos podido identificar las distintas necesidades de usuario. Para cubrir las necesidades y establecer una ruta de trabajo hemos realizado las siguientes historias de usuarios:
+
+##### Historia de Usuario N°1 
+  Cómo usuario  
+  Quiero poder crear una cuenta en esta red social 
+  Para ser parte de esta comunidad 
+ 
+Criterios de aceptación: 
+
+•	Interfaz de bienvenida que contenga un enlace que redireccione al usuario a la página de creación de cuenta. 
+•	Página de crear cuenta que debe contar con campos de texto para que el usuario deposite la información necesaria.  
+•	Validación de los datos del usuario. 
+•	Debe contar con un botón clickeable para crear la cuenta. 
+•	Modal de confirmación de cuenta creada con éxito. 
+•	Dentro del modal un botón que al clickearlo dirija al usuario al muro.  
+•	También puede crear cuenta con Google. 
+
+Definición de terminado: 
+
+•	Debe ser una SPA  
+•	Debe ser responsive 
+•	La cuenta solo puede ser creada si la información del usuario es válida.  
+•	Code review
+•	Test de usabilidad  
+•	Test Unitario. 
+•	Despliegue y etiquetamos la versión 
+
+##### Historia de Usuario N°2 
+
+Cómo usuario  
+Quiero poder iniciar sesión en esta red social 
+Para ingresar al muro rápidamente, ya que ya poseo una cuenta 
+ 
+Criterios de aceptación: 
+
+•	Interfaz de bienvenida que contenga un botón que dirija a la página de iniciar sesión. 
+•	Página de inicio de sesión que debe contar con campos de texto para que el usuario ingrese su correo y contraseña. 
+•	Validación de los datos del usuario. 
+•	Debe contar con un botón clickeable que dirija al muro. 
+•	Inicio de sesión con Google.
+•	Alternativa para restablecer la contraseña. 
+
+
+Definición de terminado: 
+
+•	Debe ser una SPA  
+•	Debe ser responsive 
+•	Solamente se puede iniciar sesión si coinciden los datos dados con la cuenta existente.
+•	Test Unitario. 
+•	Code review
+•	Test de usabilidad  
+•	Test Unitario. 
+•	Despliegue y etiquetamos la versión 
+
+
+##### Historia de Usuario N°3
+
+Cómo usuario  
+Quisiera cerrar mi sesión en la red social
+Porque voy a ingresar desde otro dispositivo ó alguien más va ingresar en dónde está mi sesión actualmente
+ 
+Criterios de aceptación: 
+
+•	Botón de “Salir”
+•	Cuando clickeamos en este botón mostrar modal de confirmación
+•	Modal de confirmación: 
+	  Si : Vuelve a la página de bienvenida, sale con éxito
+	  No: Permanece en el muro
+
+ 
+Definición de terminado: 
+
+•	Debe ser una SPA  
+•	Debe ser responsive 
+•	Code review
+•	Test de usabilidad  
+•	Test Unitario. 
+•	Despliegue y etiquetamos la versión 
+
+##### Historia de Usuario N°4
+Cómo usuario  
+Quiero publicar un mensaje, consejo o dato de interés
+Para aportar o compartir con los demás integrantes de la comunidad
+ 
+Criterios de aceptación: 
+
+•	Muro que contenga los posts hechos por los usuarios
+•	Sección de postear
+•	Input tipo texto, con un límite de 280 carácteres 
+•	Indicador de cantidad de carácteres para que el usuario no se exceda
+•	No se puede publicar un post vacío
+•	Botón de publicar
+•	Al clickear sobre este botón se realiza el post y se muestra en el muro
+•	Los posts se muestran del más reciente al más antiguo
+ 
+Definición de terminado: 
+
+•	Debe ser una SPA  
+•	Debe ser responsive 
+•	Code review
+•	Test de usabilidad  
+•	Test Unitario. 
+•	Despliegue y etiquetamos la versión 
+
+
+##### Historia de Usuario N°5
+
+Cómo usuario  
+Quiero poder eliminar una publicación
+Porque ya no quiero que vean mi publicación 
+ 
+Criterios de aceptación: 
+
+•	Botón que ofrezca la opción de eliminar el post
+•	Al clickear en el botón de eliminar mostrar un mensaje de confirmación: 
+  Si: para eliminar la publicación y refrescar el muro. 
+  No: mantiene la publicación.
+ 
+Definición de terminado: 
+
+•	Debe ser una SPA  
+•	Debe ser responsive 
+•	Code review
+•	Test de usabilidad  
+•	Test Unitario. 
+•	Despliegue y etiquetamos la versión 
+
+
+##### Historia de Usuario N°6
+
+Cómo usuario  
+Quiero poder editar mi publicación
+Porque cometí un error ortográfico y quiero modificarlo 
+ 
+Criterios de aceptación: 
+
+•	Botón que ofrezca la opción de editar
+•	Solo se pueden editar posts propios
+•	Cuando clickeamos en ‘editar’ el post se convierte en campo de texto en que se podrá reescribir
+•	El post a editar se verá resaltado para que usuario sepa cuál está editando
+•	Cuando estemos editando tendremos disponibles un botón para cancelar y otro para guardar
+
+ 
+Definición de terminado: 
+
+•	Debe ser una SPA  
+•	Debe ser responsive 
+•	Code review
+•	Test de usabilidad  
+•	Test Unitario. 
+•	Despliegue y etiquetamos la versión 
+
+
+##### Historia de Usuario N°7
+ 
+Cómo usuario  
+Quiero darle like a un post
+Porque me interesa/atrae el contenido de este post
+ 
+Criterios de aceptación: 
+
+•	Botón de “Me gusta” clickeable
+•	Al dar like, mostrar el like y la cantidad ( 0 => 1 ó 2 => 3 )
+•	La cantidad va sumar o restar si se da o retira el like
+•	Los likes siempre se van a ver en todos los post
+
+ 
+Definición de terminado: 
+
+•	Debe ser una SPA  
+•	Debe ser responsive 
+•	Code review
+•	Test de usabilidad  
+•	Test Unitario. 
+•	Despliegue y etiquetamos la versión 
+
+
+## Prototipos del producto:
+
+Para la estructura de la aplicación definimos unos prototipos de baja y de alta fidelidad. Al principio utilizamos como fondo el color negro, según lo indicado por los usuarios y colores neón, partiendo de ese primer prototipo, se realizó un test de usabilidad y estos son las observaciones que nos dieron los usuarios: 
+
+Una vez hecho el testo y teniendo en cuenta las observaciones, logramos sacar un prototipo más oficial de la aplicación para versión móvil y desktop, el cual dejamos a continuación:
+
+a.	Alta y baja de Móvil: https://www.figma.com/file/2RdpYobNiY8pjVAMC2s8xV/Prototipos-M%C3%B3vil?t=2sJJrvphWNInRbP5-0
+
+
+
+b.	Alta y baja de Desktop: https://www.figma.com/file/SuZ0j9VbEHoW29H73jsouS/Prototipos-Desktop?node-id=141%3A96&t=2sJJrvphWNInRbP5-0
+
+Se realizó un último cambió, según un nuevo test de usabilidad, el cual quedó de la siguiente manera:
+
+
+
+
+
+
+
+
+
+
 # Creando una Red Social
 
 ## Índice
