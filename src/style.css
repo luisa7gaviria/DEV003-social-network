@@ -302,7 +302,7 @@ input:hover {
 }
 
 .timeHeader {
-    background-color: #243981;
+    background-color: #18515E;
     width: 650px;
     height: 100px;
 }
@@ -342,7 +342,7 @@ input:hover {
 }
 
 .posting-box {
-    background-color: #599FDF;
+    background-color: #108b94;
     width: 100%;
     height: 200px;
     display: flex;
@@ -355,7 +355,7 @@ input:hover {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: #6276b865;
+    background-color: #c3c4c765;
 }
 
 #toPost{
@@ -376,7 +376,7 @@ input:hover {
 }
 
 #post{
-    background-color: #243981;
+    background-color: rgb(231 40 75);
     color: #FFFFFF;
     font-size: large;
     width: 120px;
@@ -391,7 +391,7 @@ input:hover {
     box-shadow: 0px 0px 4px 0px rgb(73, 74, 74);
 }
 #post:disabled{
-    background-color: #6276b8;
+    background-color: rgb(161 97 109);
 }
 .counter{
     margin-right: 20px;
@@ -423,7 +423,7 @@ input:hover {
 .postContent{
     width: 600px;
     height: 180px;
-    background: #2c99ff96;
+    background: #7ea5b9cf;
     border-radius: 10px;
     margin-top: 10px;
 }
@@ -441,13 +441,19 @@ input:hover {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-width: 3px;
-    border-color: #599FDF;
+    border-width: 2px;
+    border-color: rgb(231 40 75);
     background: #d8dcff;
     border-radius: 50px;
     cursor: pointer;
     flex-direction: row-reverse;
 }
+#deletePost:hover { 
+box-shadow: 0px 0px 4px 0px rgb(73, 74, 74); }
+    
+#editPost:hover{ 
+box-shadow: 0px 0px 4px 0px rgb(73, 74, 74); }
+
 #editPost{
     margin-right: 20px; 
 }
@@ -692,6 +698,7 @@ input:hover {
     #editPost, #deletePost{
         width: 80px;
         height: 25px;
+        border-width: 2px;
     }
     #likeBtn {
         width: 25px;

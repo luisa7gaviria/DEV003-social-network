@@ -4,8 +4,8 @@ export const showTime = () => {
   const minutes = myDate.getMinutes();
   const seconds = myDate.getSeconds();
   const year = myDate.getFullYear();
-  const month = myDate.getMonth();
-  const day = myDate.getDay();
+  const month = myDate.getMonth() + 1;
+  const day = myDate.getDate();
   const date = (`${hours}:${minutes}:${seconds} ${year}-${month}-${day}`).toString();
   return date;
 };
