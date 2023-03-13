@@ -28,7 +28,7 @@ export function create(onNavigate) {
      </div>
 
      <div class="button-create">
-       <button type="submit" id="createAcc" > Crear </button>x
+       <button type="submit" id="createAcc" > Crear </button>
      </div>
 
   </form>
@@ -36,7 +36,7 @@ export function create(onNavigate) {
 
   <div class="modal"> 
       <div class="modal-content">
-        <p> Tu usuario ha sido creado <br> Gracias por registrarte en GGamers</p>
+        <p id="createdMsg"> Tu usuario ha sido creado <br> Gracias por registrarte en GGamers</p>
          <img class="continue-by-g" src="Images/homelogo.png">
         </div>
     </div>

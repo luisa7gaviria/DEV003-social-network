@@ -35,10 +35,8 @@ rootDiv.replaceChild(component(onNavigate), rootDiv.firstChild);
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    const uid = user.uid;
-    console.log(uid);
+    onNavigate('/muro');
   } else {
     onNavigate('/');
-    console.log('user is out');
   }
 });

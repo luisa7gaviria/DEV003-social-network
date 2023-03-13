@@ -1,6 +1,6 @@
 import { onSnapshot } from 'firebase/firestore';
 import {
-  exit, addPost, deletePost, q, editPost, sumLike, removeLike,
+  exit, addPost, deletePost, q, editPost, askUserLike,
 } from '../lib/functions';
 import { auth } from '../firebaseconf';
 
@@ -14,8 +14,11 @@ export const timeline = (onNavigate) => {
   
   <div class="posting-box">
      <textarea id="toPost" placeholder="¿En qué estás pensando?..." maxlength="180" cols="50"></textarea>
-     <p class="counter"><span id="count"></span> / 180 </p>
-     <button id="post"> Publicar </button>
+     <div class="post-box-footer"> 
+        <button id="post"> Publicar </button>
+        <p class="counter"><span id="count"></span> / 180 </p>
+     </div>
+     
   </div>
 
   <div class="timelineBox"> 
@@ -146,20 +149,10 @@ export const timeline = (onNavigate) => {
           editModal.classList.remove('edit-modal-activo');
         });
 
-        // dar like y quitar like
-
-        let userStatus = false; // autenticamos si ya likeó o no
-        const likeBtn = postsContainer.querySelector('#likeBtn');
-        likeBtn.addEventListener('click', () => {
-          if (!userStatus) {
-            likeBtn.classList.add('liked');
-            sumLike(postId, auth.currentUser.uid);
-            userStatus = true; // estado true = likeó
-          } else if (userStatus) { // si ya likeó puede retirar su like y vuelve a false
-            likeBtn.classList.remove('liked');
-            removeLike(postId, auth.currentUser.uid);
-            userStatus = false;
-          }
+        // dando y retirando el like
+        const likeButton = postsContainer.querySelector('#likeBtn');
+        likeButton.addEventListener('click', () => {
+          askUserLike(auth.currentUser.uid, postId);
         });
 
         // condición para que solo el usuario manipule sus propios posts

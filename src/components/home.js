@@ -8,7 +8,7 @@ export const home = (onNavigate) => {
   <h4>¿No tienes una cuenta? <span id="go-to-register"> Crea una </span></h4>
   
   <footer>
-    <p> Hecho por Kelly Rivas, Luisa Gaviria y Pamela González </p>
+    <p> Hecho por Luisa Gaviria y Pamela González </p>
   </footer> 
   `;
 
