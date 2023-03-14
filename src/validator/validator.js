@@ -4,7 +4,7 @@ const expresiones = {
   correo: /^\w.+@[a-zA-Z_]+\.[a-zA-Z]{2,3}$/,
 };
 export const inputStatus = {
-  name: false,
+
   mail: false,
   password: false,
 };
@@ -23,10 +23,6 @@ export const validarCampo = (expresion, inputext, campo) => {
 
 export const validateCreateForm = (input) => {
   switch (input.name) {
-    case 'nombre':
-      validarCampo(expresiones.usuario, input, 'name');
-      break;
-
     case 'correo':
       validarCampo(expresiones.correo, input, 'mail');
       break;
@@ -35,7 +31,7 @@ export const validateCreateForm = (input) => {
       validarCampo(expresiones.password, input, 'password');
       break;
 
-    case 'contraseña2':
+    case 'passwordtwo':
       validarCampo(expresiones.password, input, 'passwordtwo');
       break;
 

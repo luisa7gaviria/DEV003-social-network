@@ -28,7 +28,7 @@ export const login = (onNavigate) => {
     
     <div class="modal"> 
       <div class="modal-content">
-        <p> ¡ Ingreso exitoso ! Ya puedes continuar a tu muro</p>
+        <p id="successLogin">¡ Ingreso exitoso ! Ya puedes continuar a tu muro</p>
          <img class="continue-by-g" src="Images/homelogo.png">
         </div>
     </div>
@@ -68,8 +68,7 @@ export const login = (onNavigate) => {
     if (inputStatus.mail && inputStatus.password) {
       logAcc(iLogMail.value, iLogPassword.value)
         .then(() => {
-          loginSection.querySelector('.modal').classList.remove('success-modal');
-          onNavigate('/muro');
+          loginSection.querySelector('.modal').classList.add('success-modal');
           logForm.reset();
         })
         .catch(() => {
@@ -81,13 +80,12 @@ export const login = (onNavigate) => {
   loginSection.querySelector('.butongoo').addEventListener('click', () => {
     googleLogIn()
       .then(() => {
-        loginSection.querySelector('.modal').classList.add('success-modal');
-
-        loginSection.querySelector('.continue-by-g').addEventListener('click', () => {
-          loginSection.querySelector('.modal').classList.remove('success-modal');
-          onNavigate('/muro');
-        });
+        onNavigate('/muro');
       });
+  });
+
+  loginSection.querySelector('.continue-by-g').addEventListener('click', () => {
+    onNavigate('/muro');
   });
 
   loginSection.querySelector('.back-btn').addEventListener('click', () => {

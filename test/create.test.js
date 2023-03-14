@@ -32,19 +32,9 @@ describe('Testeando el componete de registro', () => {
     Inputpassword.value = 'Papa09li/u';
 
     form.submit();
-    createAccount();
+    createAccount(mail, Inputpassword);
     await tick();
+    expect(createAccount).toHaveBeenCalled();
     expect(createdMsg.textContent).toBe(' Tu usuario ha sido creado  Gracias por registrarte en GGamers');
   });
-
-  // it('Mensaje de error cuando creas con un correo en uso', async () => {
-  //   createAccount.mockImplementationOnce((email, password) => Promise.reject(
-  //     new Error('Este correo ya está en uso.'),
-  //   ));
-
-  //   form.submit();
-  //   createAccount();
-  //   await tick();
-  //   expect(createAccount).toHaveBeenCalled();
-  // });
 });

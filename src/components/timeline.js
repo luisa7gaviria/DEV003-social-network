@@ -13,10 +13,10 @@ export const timeline = (onNavigate) => {
   </div>
   
   <div class="posting-box">
-     <textarea id="toPost" placeholder="¿En qué estás pensando?..." maxlength="180" cols="50"></textarea>
+     <textarea id="toPost" placeholder="¿En qué estás pensando?..." maxlength="100" cols="50"></textarea>
      <div class="post-box-footer"> 
         <button id="post"> Publicar </button>
-        <p class="counter"><span id="count"></span> / 180 </p>
+        <p class="counter"><span id="count"></span> / 100 </p>
      </div>
      
   </div>
@@ -68,7 +68,7 @@ export const timeline = (onNavigate) => {
         <div class="postBox">
          <div class="postContent">
            <h2 class="postTitle"> ${postsData.Name} </h2>
-           <p> ${postsData.Descripcion} </p>
+           <p class="postTextContent"> ${postsData.Descripcion} </p>
            <span class="actTime"> ${postsData.Time} </span>
            <div class= "likePost"> 
              <img id="likeBtn" src="Images/like.png">
@@ -99,7 +99,7 @@ export const timeline = (onNavigate) => {
       <div class="edit-modal"> 
         <div class="modal-content"> 
           <textarea id="editablePost" maxlength="180" cols="50"> </textarea>
-          <p class="counter2"><span id="count2"></span> / 180 </p>
+          <p class="counter2"><span id="count2"></span> / 100 </p>
           <div class="edit-confirmation" >
              <button id="save-edit" > Guardar </button>
              <button id="cancel-edit" > Cancelar </button>

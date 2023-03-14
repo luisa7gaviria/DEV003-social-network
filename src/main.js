@@ -19,23 +19,25 @@ export function onNavigate(pathname) {
     pathname,
     window.location.origin + pathname,
   );
-  rootDiv.replaceChild(routes[pathname](onNavigate), rootDiv.firstChild);
+  rootDiv.removeChild(rootDiv.firstChild);
+  rootDiv.appendChild(routes[pathname](onNavigate));
 }
 
-const component = routes[window.location.pathname];
+const component = routes[window.location.pathname](onNavigate);
 
 window.onpopstate = () => {
-  rootDiv.replaceChild(component, rootDiv.firstChild);
+  rootDiv.replaceChild(routes[window.location.pathname](onNavigate), rootDiv.firstChild);
 };
 
-rootDiv.replaceChild(component(onNavigate), rootDiv.firstChild);
+rootDiv.removeChild(rootDiv.firstChild);
+rootDiv.appendChild(component);
 
 // detectamos si el usuario está logeado o no
 // si el caso es no, redirige a '/'
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    onNavigate('/muro');
+    console.log(user.uid);
   } else {
     onNavigate('/');
   }

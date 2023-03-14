@@ -6,11 +6,6 @@ export function create(onNavigate) {
   <h1 class="create-t">CREAR CUENTA</h1>
   <form id="createForm">
 
-   <div id="group__name">
-     <input id= "name" type="text" name="nombre" placeholder="Nombre" maxlength="16" > 
-     <p class="form__input-error" > Este campo solo permite letras y números <br> con un máximo de 16 carácteres. </p>
-    </div>
-
     <div id="group__mail">
      <input id= "mail" type="text" name="correo" placeholder="Correo Electrónico" maxlength="50" >
      <p class="form__input-error"> Por favor ingresa una dirección de correo válida. </p>
@@ -23,7 +18,7 @@ export function create(onNavigate) {
          </div>
     
      <div id="group__passwordtwo" class="group-pass">
-       <input id= "passwordtwo" type="password" name="contraseña2" placeholder="Confirma tu contraseña" maxlength="16">
+       <input id= "passwordtwo" type="password" name="passwordtwo" placeholder="Confirma tu contraseña" maxlength="16">
        <p class="form__input-error"> Las contraseñas deben ser iguales </p>
      </div>
 

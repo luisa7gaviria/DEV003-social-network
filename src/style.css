@@ -299,6 +299,7 @@ input:hover {
     background: linear-gradient(90deg, #8b37af97 50%, #3ab9ebb7 100%);
     position: fixed;
     transition: all .4s;
+    z-index: 1;
 }
 
 .timeHeader {
@@ -427,6 +428,9 @@ input:hover {
     border-radius: 10px;
     margin-top: 10px;
 }
+.postTextContent{
+    margin: 0;
+}
 .actTime{
     position: relative;
     top: 20px;
@@ -476,6 +480,7 @@ input:hover {
     background: linear-gradient(90deg, #8b37af97 50%, #3ab9ebb7 100%);
     position: fixed;
     transition: all .4s;
+    z-index: 1;
 }
 .delete-confirmation{
     margin: 10px;
@@ -496,6 +501,7 @@ input:hover {
     background: linear-gradient(90deg, #8b37af97 50%, #3ab9ebb7 100%);
     position: fixed;
     transition: all .4s;
+    z-index: 1;
     
 }
 #editablePost {
@@ -534,6 +540,9 @@ input:hover {
 .buttonsContainer{
     display: flex;
     flex-direction: row-reverse;
+    position: relative;
+    top:20px;
+    z-index: 0;
 }
 .likePost{
     display: flex;
@@ -541,7 +550,8 @@ input:hover {
     width: 100px;
     position: relative;
     left:10px;
-    top:30px;
+    top:50px;
+    z-index: 1;
 }
 #likeBtn{
     border-radius: 16px;
