@@ -16,6 +16,7 @@ import {
   arrayUnion,
   arrayRemove,
   getDoc,
+  onSnapshot,
 } from 'firebase/firestore';
 import { auth, db } from '../firebaseconf';
 import { showTime } from '../setDate';
@@ -45,6 +46,8 @@ export const addPost = (text) => {
 };
 
 export const q = query(collection(db, 'Posts'), orderBy('Time', 'desc'));
+
+export const postRequest = (querySnapshot) => onSnapshot(q, querySnapshot);
 
 export const deletePost = (idPost) => deleteDoc(doc(db, 'Posts', idPost));
 

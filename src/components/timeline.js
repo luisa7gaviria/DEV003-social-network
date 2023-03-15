@@ -1,6 +1,5 @@
-import { onSnapshot } from 'firebase/firestore';
 import {
-  exit, addPost, deletePost, q, editPost, askUserLike,
+  exit, postRequest, addPost, deletePost, editPost, askUserLike,
 } from '../lib/functions';
 import { auth } from '../firebaseconf';
 
@@ -57,7 +56,7 @@ export const timeline = (onNavigate) => {
 
   // pintando datos en el muro en tiempo real
 
-  onSnapshot(q, (snapshot) => {
+  postRequest((snapshot) => {
     timelineContent.querySelector('#postList').innerHTML = ''; // reemplazamos el contenido cada vez que hay un cambio
     snapshot.forEach((everypost) => {
       const postsData = everypost.data();

@@ -23,7 +23,7 @@ export function create(onNavigate) {
      </div>
 
      <div class="button-create">
-       <button type="submit" id="createAcc" > Crear </button>
+       <input type="submit" id="createAcc" value="Crear"></button>
      </div>
 
   </form>
@@ -85,7 +85,7 @@ export function create(onNavigate) {
 
   myForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (inputStatus.name && inputStatus.mail && inputStatus.password) {
+    if (inputStatus.mail && inputStatus.password) {
       createAccount(mailInput.value, input1.value)
         .then(() => {
           section.querySelector('.modal').classList.add('success-modal');
