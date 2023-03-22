@@ -1,7 +1,7 @@
 export const home = (onNavigate) => {
   const homePage = `
 
-  <img class="gg-logo" src="../src/Images/logo.png">
+  <img class="gg-logo" src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/logo.png?raw=true">
   <h1> ¡Bienvenido a GGamers!</h1>
   <h2> La red social para los amantes de los videojuegos </h2>
   <button id="log-in-btn"> Iniciar Sesión </button>

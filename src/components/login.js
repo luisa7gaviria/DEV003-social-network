@@ -14,7 +14,7 @@ export const login = (onNavigate) => {
       <div class="group-pass" id="group__password">
         <input id="password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
         <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, <br> números y algún carácter especial sin espacios.</p>
-        <img src="../src/Images/ojo.png" class="showPassword">
+        <img src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/ojo.png?raw=true" class="showPassword">
         </div>
 
       <div>
@@ -22,14 +22,14 @@ export const login = (onNavigate) => {
       </div>
     </form>
  
-    <img class="butongoo" src='../src/Images/btngooglein.png'>
+    <img class="butongoo" src='https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/btngooglein.png?raw=true'>
 
     <button class="back-btn"> Regresar </button> 
     
     <div class="modal"> 
       <div class="modal-content">
         <p id="successLogin">¡ Ingreso exitoso ! Ya puedes continuar a tu muro</p>
-         <img class="continue-by-g" src="../src/Images/homelogo.png">
+         <img class="continue-by-g" src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/homelogo.png?raw=true">
         </div>
     </div>
       

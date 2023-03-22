@@ -32,7 +32,7 @@ export function create(onNavigate) {
   <div class="modal"> 
       <div class="modal-content">
         <p id="createdMsg"> Tu usuario ha sido creado <br> Gracias por registrarte en GGamers</p>
-         <img class="continue-by-g" src="../src/Images/homelogo.png">
+         <img class="continue-by-g" src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/homelogo.png?raw=true">
         </div>
     </div>
 

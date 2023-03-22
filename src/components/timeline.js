@@ -8,7 +8,7 @@ export const timeline = (onNavigate) => {
   <div class="timeHeader">
      <button class = "go-out"> Salir </button> 
      <h3 class="time-t"> Inicio </h3>
-     <img class="time-logo" src="../src/Images/logo.png">
+     <img class="time-logo" src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/logo.png?raw=true">
   </div>
   
   <div class="posting-box">
@@ -70,16 +70,16 @@ export const timeline = (onNavigate) => {
            <p class="postTextContent"> ${postsData.Descripcion} </p>
            <span class="actTime"> ${postsData.Time} </span>
            <div class= "likePost"> 
-             <img id="likeBtn" src="../src/Images/like.png">
+             <img id="likeBtn" src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/like.png?raw=true">
              <p class="totalLikes"> ${postsData.Likes.length} </p>
                        
            </div>
            <div class = "buttonsContainer">
              <button id ="deletePost"> Eliminar
-               <img src="../src/Images/trash-bin.png">
+               <img src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/trash-bin.png?raw=true">
              </button>
                <button id="editPost"> Editar
-                 <img src="../src/Images/editar.png">
+                 <img src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/editar.png?raw=true">
                </button>
            </div>
           </div>
