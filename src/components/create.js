@@ -14,7 +14,7 @@ export function create(onNavigate) {
       <div id="group__password" class="group-pass"> 
          <input id= "password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
          <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, números y algún carácter especial sin espacios. </p>
-         <img src="../src/Images/ojo.png" class="showPassword">
+         <img src="https://github.com/luisa7gaviria/DEV003-social-network/blob/ramalu/src/Images/ojo.png?raw=true" class="showPassword">
          </div>
     
      <div id="group__passwordtwo" class="group-pass">
