@@ -8,7 +8,7 @@ export const timeline = (onNavigate) => {
   <div class="timeHeader">
      <button class = "go-out"> Salir </button> 
      <h3 class="time-t"> Inicio </h3>
-     <img class="time-logo" src="Images/logo.png">
+     <img class="time-logo" src="../src/Images/logo.png">
   </div>
   
   <div class="posting-box">
@@ -70,16 +70,16 @@ export const timeline = (onNavigate) => {
            <p class="postTextContent"> ${postsData.Descripcion} </p>
            <span class="actTime"> ${postsData.Time} </span>
            <div class= "likePost"> 
-             <img id="likeBtn" src="Images/like.png">
+             <img id="likeBtn" src="../src/Images/like.png">
              <p class="totalLikes"> ${postsData.Likes.length} </p>
                        
            </div>
            <div class = "buttonsContainer">
              <button id ="deletePost"> Eliminar
-               <img src="Images/trash-bin.png">
+               <img src="../src/Images/trash-bin.png">
              </button>
                <button id="editPost"> Editar
-                 <img src="Images/editar.png">
+                 <img src="../src/Images/editar.png">
                </button>
            </div>
           </div>

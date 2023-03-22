@@ -14,7 +14,7 @@ export function create(onNavigate) {
       <div id="group__password" class="group-pass"> 
          <input id= "password" type="password" name="contraseña" placeholder="Contraseña" maxlength="16">
          <p class="form__input-error"> Digita de 8 a 16 carácteres incluyendo mayúsculas, minúsculas, números y algún carácter especial sin espacios. </p>
-         <img src="Images/ojo.png" class="showPassword">
+         <img src="../src/Images/ojo.png" class="showPassword">
          </div>
     
      <div id="group__passwordtwo" class="group-pass">
@@ -32,7 +32,7 @@ export function create(onNavigate) {
   <div class="modal"> 
       <div class="modal-content">
         <p id="createdMsg"> Tu usuario ha sido creado <br> Gracias por registrarte en GGamers</p>
-         <img class="continue-by-g" src="Images/homelogo.png">
+         <img class="continue-by-g" src="../src/Images/homelogo.png">
         </div>
     </div>
 
